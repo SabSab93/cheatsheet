@@ -1,10 +1,10 @@
 # Introduction à git
 
 
-Git est un système de contrôle de version distribué **open source**, largement utilisé pour le développement de logiciels. Il a été créé par Linus Torvalds en 2005 pour gérer le développement du **noyau Linux**. C'est un logiciel qui peut être utilisé et heberger par different Git server tel que **GitHub** ou  **GitLab**.
+Git est un système de contrôle de version distribué <span style="color:red">open source</span>, largement utilisé pour le développement de logiciels. Il a été créé par Linus Torvalds en 2005 pour gérer le développement du <span style="color:red">noyau Linux</span>. C'est un logiciel qui peut être utilisé et heberger par different Git server tel que <span style="color:red">GitHub</span> ou  <span style="color:red">GitLab</span>.
 
 
-Il existe la doc officielle : https://git-scm.com/
+Il existe la [documentation officielle](https://git-scm.com/)
 
 
 # Manipulation git
@@ -80,7 +80,7 @@ Est utilisée pour enregistrer les modifications ajoutées à la staging area.
 commit : est une capture instantanée de l'état de votre projet à un moment donné
 message du commit : l'option -m permet de spécifier le message de commit directement dans la commande ici : first commit
 
-_Avoir le reflex de commit les travaux le plus souvent possible !_
+_**Avoir le reflex de commit les travaux le plus souvent possible !**_
 ****
 
 ```git
@@ -103,7 +103,7 @@ git remote : La commande git remote est utilisée pour gérer les dépôts dista
 
 origin : origin est le nom par défaut donné au dépôt distant. C'est une convention couramment utilisée.
 
-git@github.com:SabSab93/Repo_Test.git : C'est l'URL du dépôt distant sur GitHub. Cette URL utilise le protocole **SSH** pour accéder au dépôt.
+git@github.com:SabSab93/Repo_Test.git : C'est l'URL du dépôt distant sur GitHub. Cette URL utilise le protocole <span style="color:red">SSH</span> pour accéder au dépôt.
 
 ```git
 git push -u origin main
@@ -124,7 +124,7 @@ git push -u origin main
 
 ### Cloner un dépot existant 
 Possibilité de recuperer un projet d'un autre collaborateur git et de travailler en collobaration.
-- Pour cela nous devons recuperer le code grâce à la clé **SSH**. Dans le depôt se rendre dans <>code: copier URL de la clé SSH : <URL du dépôt en SSH>
+- Pour cela nous devons recuperer le code grâce à la clé <span style="color:red">SSH</span>. Dans le depôt se rendre dans <>code: copier URL de la clé SSH : <URL du dépôt en SSH>
 - Se rendre dans le terminal et taper :
 
 ```git
