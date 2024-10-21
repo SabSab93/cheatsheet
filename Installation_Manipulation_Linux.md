@@ -4,17 +4,17 @@
 
 Possibilite de travailler sous macOs, Windows ou Linux.
 
-Il est preferable de travailler sous le systeme d'exploitation Linux. Il existe d'autres possibilités (Installer Linux ou double boot càd avoir 2 systemes) 
+Il est preferable de travailler sous le systeme d'exploitation <span style="color:red"> Linux</span> . Il existe d'autres possibilités (Installer Linux ou double boot càd avoir 2 systemes) 
 
 Dire les avantages de Linux comparer aux autres.
 
 ## Installation
 
 Et pour ce faire, nous devons configurer notre pc afin de creer un sous syteme.
-Linux est un **système d’exploitation** de type **Unix** basé sur le **noyau Linux**.
+Linux est un <span style="color:red"> système d’exploitation</span> de type <span style="color:red">Unix</span> basé sur le <span style="color:red"> **noyau Linux**</span>.
 
 
-Afin de travailler sous linux, il faut virtualiser Windows et ajouter les fonctionnalités du Sous-système Windows pour Linux (wsl) dans  "Activer ou désactiver des fonctionnalités Windows" dans les parametres windows.
+Afin de travailler sous Linux, il faut virtualiser Windows et ajouter les fonctionnalités du Sous-système Windows pour Linux (wsl) dans  "Activer ou désactiver des fonctionnalités Windows" dans les parametres windows.
 
 Cocher :
 - Sous-systemes Windows pour Linux
@@ -25,7 +25,7 @@ Redemarrer le pc
 
 Installer la distribution ubuntu dans Microsoft Store et le lancer.
 
-Ouvrir le terminal wsl.
+Ouvrir le terminal WSL.
 
 ## Les commandes sous Linux
 
