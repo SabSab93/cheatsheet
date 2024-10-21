@@ -108,7 +108,7 @@ git@github.com:SabSab93/Repo_Test.git : C'est l'URL du dépôt distant sur GitHu
 ```git
 git push -u origin main
 ```
-Permet de pousser les modifications vers le dépôt distant (origin).
+Permet de pousser les modifications vers le dépôt distant (origin). L'automatisation vers l'origin se fait grâce à l'option -u.
 ****
 
 #### 2ème cas : Pousser un repository existant 
