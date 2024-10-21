@@ -7,7 +7,15 @@ Possibilite de travailler sous macOs, Windows ou Linux.
 
 Il est preferable de travailler sous le systeme d'exploitation <span style="color:red"> Linux</span> . Il existe d'autres possibilités (Installer Linux ou double boot càd avoir 2 systemes) 
 
-Dire les avantages de Linux comparer aux autres.
+Les avantages de Linux :
+-   Stabilité et Fiabilité 
+-   Open Source 
+-   Outils de Développement puissant (git)
+-   Environnement de Développement : ombreux langages de programmation et frameworks sont développés et testés principalement sur Linux (exemple : Python, Ruby,...)
+-   Sécurité 
+-   Performance 
+-   Compatibilité avec les Serveurs
+
 
 # Installation
 
@@ -18,8 +26,8 @@ Linux est un <span style="color:red"> système d’exploitation</span> de type <
 Afin de travailler sous Linux, il faut virtualiser Windows et ajouter les fonctionnalités du Sous-système Windows pour Linux (wsl) dans  "Activer ou désactiver des fonctionnalités Windows" dans les parametres windows.
 
 Cocher :
-- Sous-systemes Windows pour Linux
-- Plateforme de l'hyperviseur Windows
+- [x] Sous-systemes Windows pour Linux
+- [x] Plateforme de l'hyperviseur Windows
 
 Redemarrer le pc
 
@@ -76,6 +84,7 @@ Afficher une liste des fichiers et des répertoires dans le répertoire courant 
 options :
 - "-a" : Affiche tous les fichiers, y compris les fichiers cachés (ceux dont le nom commence par un point . ex: .git)
 - "-l" : Affiche les fichiers et les répertoires en format long, incluant les permissions, le nombre de liens, le propriétaire, le groupe, la taille, et la date de modification.
+![screen_cds_ls](/image/GitPart/screen_cds_ls.png)
 ****
 
 
@@ -132,6 +141,12 @@ Est utilisée pour supprimer des fichiers et des répertoires.
 ```
 Affiche le contenu de fichiers. Elle est couramment utilisée pour lire et afficher le contenu de fichiers texte dans le terminal
 ****
+
+
+``` batch
+ mount
+```
+Permet de monter des disque
 
 
 Les alias : On peut créer des raccourcis de commandes Les alias permettent de simplifier et de personnaliser l'utilisation des commandes dans le terminal. Dans le dossier ~/.bashrc.
