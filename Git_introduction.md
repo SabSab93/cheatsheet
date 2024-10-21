@@ -33,13 +33,13 @@ git config --global user.email johndoe@example.com
 - Se rendre sur notre GitHub.
 - Cliquez sur le bouton "+" en haut à droite et sélectionnez "New repository".
 - Donnez un nom au dépôt, ajoutez une description si nécessaire, visibilité : public ou privé (ne pas hesiter à mettre les travaux en public), et cliquez sur "Create repository".
-- Une fois le repository creer, git nous facilite en indiquant les commandes à taper dans notre terminal afin de connecter notre projet local à l'origin :
+- Une fois le repository creer, git nous facilite en indiquant les commandes à taper dans notre terminal afin de connecter notre projet local au celui du distant (l'origin) :
 
 ![Create repository cde](/image/GitPart/create_new_repo_or_push.png "Commande à taper lors d'une creation repo")
 
 :bulb: A savoir
 
-Nous pouvons modifier les parametres de notre repo à tout moment dans la rubrique "setting"
+Nous pouvons modifier les parametres de notre repo à tout moment dans la rubrique "Settings"
 -   Renommer le repository
 -   Modifier le nom de la branche principale "main" (_cf : Historiquement, la branche principale d'un dépôt Git était souvent nommée master, mais de plus en plus de projets utilisent main pour des raisons de neutralité et d'inclusivité suite à l'affaire George Floyd._)
 -   De changer la visibilité (privé/public)/ de supprimer... dans la partie "Danger Zone"
@@ -62,13 +62,16 @@ Ajouter une ligne de texte à un fichier nommé README.md - Facultative
 ```git
 git init
 ```
-Initialiser un dépôt Git; Git crée un sous-répertoire caché nommé .git. Ce répertoire contient tous les fichiers et dossiers nécessaires pour gérer le dépôt Git.  - Important et obligatoire
+Initialiser un dépôt Git; Git crée un sous-répertoire caché nommé .git. 
+
+Ce répertoire contient tous les fichiers et dossiers nécessaires pour gérer le dépôt Git. 
 ****
 
 ```git
 git add README.md
 ```
 Ajouter le fichier README.md à l'index de Git - Facultative mais crucial, le README.md sert de point d'entrée pour les utilisateurs qui visitent notre dépôt et fournit des informations essentielles sur notre projet : 
+
 Présentation du Projet /  Instructions d'Installation / Guide d'Utilisation / Contribution / Licence / Documentation ...
 ****
 
@@ -154,9 +157,9 @@ Sur settings
 
 
 ****
-<h1 align="center">Definitions</h1>
+<h1 align="center" style="color:pink">Definitions</h1>
 
-Noyau Linux : lE composant central du système d'exploitation Linux. Il joue un rôle crucial en gérant les ressources matérielles et en fournissant une interface entre le matériel et les logiciels.
+Noyau Linux : Le composant central du système d'exploitation Linux. Il joue un rôle crucial en gérant les ressources matérielles et en fournissant une interface entre le matériel et les logiciels.
 ****
 Open Source : Le noyau Linux est un logiciel open source, ce qui signifie que son code source est disponible gratuitement et peut être modifié, distribué et utilisé par n'importe qui. Cette nature open source a permis une collaboration mondiale et une amélioration continue du noyau.
 ****
@@ -172,4 +175,3 @@ Clé SSH : Une paire de clés cryptographiques utilisée pour authentifier les u
 
 - Clé publique : Cette clé est partagée avec le serveur (par exemple, GitHub) et est utilisée pour chiffrer les données.
 - Clé privée : Cette clé reste sur votre machine locale et est utilisée pour déchiffrer les données. Elle doit être gardée secrète et sécurisée.
-****
