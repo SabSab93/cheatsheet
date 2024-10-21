@@ -38,7 +38,7 @@ git config --global user.email johndoe@example.com
 - Donnez un nom au dépôt, ajoutez une description si nécessaire, visibilité : public ou privé (ne pas hesiter à mettre les travaux en public), et cliquez sur "Create repository".
 - Une fois le repository creer, git nous facilite en indiquant les commandes à taper dans notre terminal afin de connecter notre projet local au celui du distant (l'origin) :
 
-![Create repository cde](/image/GitPart/create_new_repo_or_push.png "Commande à taper lors d'une creation repo")
+![Create repository cde](/image/GitPart/create_new_repo_or_push.png "Commande à taper lors d'une creation dépôt")
 
 :bulb: A savoir
 
@@ -116,6 +116,11 @@ git push -u origin main
 ```
 Permet de pousser les modifications vers le dépôt distant (origin). L'automatisation vers l'origin se fait grâce à l'option -u.
 ****
+
+```git
+code .
+```
+Pour lancer Vs code sur WSL.
 
 #### 2ème cas : Pousser un repository existant 
 
