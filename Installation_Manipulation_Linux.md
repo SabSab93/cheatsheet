@@ -139,7 +139,7 @@ alias ll='ls -l'
  ```
 ****
 
-<h1 align="center">Definitions</h1>
+<h1 align="center"style="color:pink">Definitions</h1>
 
  Systeme d'exploitation : Logiciel système qui gère les ressources matérielles et logicielles d'un ordinateur. Il fournit une interface entre l'utilisateur et le matériel, permettant aux utilisateurs d'exécuter des applications et de gérer les ressources de manière efficace. Le système d'exploitation est responsable de la gestion des processus, de la mémoire, des périphériques d'entrée/sortie, des systèmes de fichiers, et de la sécurité. Exemples : Windows, macOS,...
 ****
