@@ -16,7 +16,7 @@ Avant tout nous devons creer un compte et installer le logiciel git.
 Creer un compte sur github.com et parametrer votre compte git avec une double autentification.
 
 ## Installer Git
-Git doit etre installé sur notre machine. On peut le télécharger depuis git-scm.com.
+Git doit etre installé sur notre machine. On peut le télécharger depuis [ce lien](git-scm.com).
 
 ## Creer un nouveau projet 
 
