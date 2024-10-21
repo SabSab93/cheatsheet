@@ -1,13 +1,10 @@
 # Introduction à git
 
 
-Git est un logiciel 
-Origin github gitlab gitserver ce sont des origins c’est un onedrive
-Code CI/CD devops permet de faire des test 
-Github permet de mettre nos travaux accesible à tous 
-open source
+Git est un système de contrôle de version distribué **open source**, largement utilisé pour le développement de logiciels. Il a été créé par Linus Torvalds en 2005 pour gérer le développement du **noyau Linux**. C'est un logiciel qui peut être utilisé et heberger par different Git server tel que **GitHub** ou  **GitLab**.
 
-Il existe la doc officielle https://git-scm.com/
+
+Il existe la doc officielle : https://git-scm.com/
 
 
 # Manipulation git
@@ -157,11 +154,22 @@ Sur settings
 
 
 ****
-<h1 align="center">Definition</h1>
+<h1 align="center">Definitions</h1>
 
+Noyau Linux : lE composant central du système d'exploitation Linux. Il joue un rôle crucial en gérant les ressources matérielles et en fournissant une interface entre le matériel et les logiciels.
+****
+Open Source : Le noyau Linux est un logiciel open source, ce qui signifie que son code source est disponible gratuitement et peut être modifié, distribué et utilisé par n'importe qui. Cette nature open source a permis une collaboration mondiale et une amélioration continue du noyau.
+****
+Git Server : Un serveur qui héberge des dépôts Git, pouvant être configuré et géré par une organisation ou un individu. Exemple : GitHub et GitLab sont des exemples de services de serveurs Git hébergés.
+****
+GitHub : Plateforme de collaboration basée sur Git. Elle offre une interface web pour héberger des dépôts Git, permettant aux développeurs de collaborer sur des projets, de suivre les modifications, de gérer les versions, et de discuter des problèmes et des améliorations.
+****
+GitLab : Une autre plateforme de collaboration basée sur Git, offrant des fonctionnalités similaires à GitHub, avec un accent sur l'intégration continue et la livraison continue; à utilisation profesionnelle.
+****
 SSH : Un protocole qui permet de se connecter à des serveurs distants de manière sécurisée. Il utilise le chiffrement pour protéger les données transmises et pour authentifier les utilisateurs.
-
+****
 Clé SSH : Une paire de clés cryptographiques utilisée pour authentifier les utilisateurs. La paire de clés comprend une clé publique et une clé privée.
 
 - Clé publique : Cette clé est partagée avec le serveur (par exemple, GitHub) et est utilisée pour chiffrer les données.
 - Clé privée : Cette clé reste sur votre machine locale et est utilisée pour déchiffrer les données. Elle doit être gardée secrète et sécurisée.
+****
