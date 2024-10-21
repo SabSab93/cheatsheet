@@ -114,7 +114,7 @@ mv fichier1.txt fichier2.txt /chemin/vers/destination/ --> Déplacer plusieurs f
 ```
 Copier des fichiers et des répertoires d'un emplacement à un autre.
 
--r ou -R : Copie les répertoires de manière récursive, c'est-à-dire en incluant tous les sous-répertoires et leurs contenus.
+-r ou -R : Copie les répertoires de manière récursive, c'est-à-dire en incluant tous les sous-répertoires et leurs contenus.Si le dossier est vide on peut utiliser sans le -r
 
 Exemple : 
 ``` batch
@@ -145,7 +145,7 @@ Affiche le contenu de fichiers. Elle est couramment utilisée pour lire et affic
 ``` batch
  mount
 ```
-Permet de monter des disque
+Permet de monter des disques
 
 
 Les alias : On peut créer des raccourcis de commandes Les alias permettent de simplifier et de personnaliser l'utilisation des commandes dans le terminal. Dans le dossier ~/.bashrc.
