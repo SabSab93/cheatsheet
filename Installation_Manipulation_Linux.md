@@ -20,7 +20,7 @@ Les avantages de Linux :
 # Installation
 
 Et pour ce faire, nous devons configurer notre pc afin de creer un sous syteme.
-Linux est un <span style="color:red"> système d’exploitation</span> de type <span style="color:red">Unix</span> basé sur le <span style="color:red"> **noyau Linux**</span>.
+Linux est un <span style="color:red"> système d’exploitation</span> de type <span style="color:red">Unix</span> basé sur le <span style="color:red">noyau Linux</span>.
 
 
 Afin de travailler sous Linux, il faut virtualiser Windows et ajouter les fonctionnalités du Sous-système Windows pour Linux (wsl) dans  "Activer ou désactiver des fonctionnalités Windows" dans les parametres windows.
@@ -31,8 +31,7 @@ Cocher :
 
 Redemarrer le pc
 
-
-Installer la distribution ubuntu dans Microsoft Store et le lancer.
+Installer la <span style="color:red">distribution ubuntu</span> dans Microsoft Store et le lancer.
 
 Ouvrir le terminal WSL.
 
@@ -165,6 +164,10 @@ alias ll='ls -l'
 
  ****
  Linux :  Un système d'exploitation open source basé sur Unix, largement utilisé sur une variété de dispositifs, des ordinateurs personnels aux serveurs et aux appareils embarqués.
+****
+Distribution ubuntu : Est une version spécifique du système d'exploitation Linux qui inclut le noyau Linux ainsi qu'un ensemble de logiciels et d'outils préconfigurés. Chaque distribution est conçue pour répondre à des besoins spécifiques
+****
+Noyau Linux : Est l'un des élément clé qui définit une distribution Linux. C'est un composant central du système d'exploitation Linux. Il joue un rôle crucial en gérant les ressources matérielles et en fournissant une interface entre le matériel et les logiciels.
 
 
 
