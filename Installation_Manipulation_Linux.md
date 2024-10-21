@@ -83,7 +83,7 @@ Afficher une liste des fichiers et des répertoires dans le répertoire courant 
 options :
 - "-a" : Affiche tous les fichiers, y compris les fichiers cachés (ceux dont le nom commence par un point . ex: .git)
 - "-l" : Affiche les fichiers et les répertoires en format long, incluant les permissions, le nombre de liens, le propriétaire, le groupe, la taille, et la date de modification.
-![screen_cds_ls](/image/GitPart/screen_cds_ls.png)
+![screen_cds_ls](/image/LinuxPart/screen_cds_ls.png)
 ****
 
 
