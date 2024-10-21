@@ -39,7 +39,8 @@ git config --global user.email johndoe@example.com
 - Une fois creer git nous facilite en indiquant les commandes à taper dans notre terminal afin de connecter notre projet local à l'origin :
 ![Create repository cde](/image/GitPart/create_new_repo_or_push.png "Commande à taper lors d'une creation repo")
 
-[!NOTE] A savoir
+:bulb: A savoir
+
 - Nous pouvons modifier les parametres de notre repo à tout moment dans la rubrique "setting"
     -   Renommer le repository
     -   Modifier le nom de la branche principale "main" (_cf : depuis l'affaire George Floyd modification de la branche principale master en main._)
