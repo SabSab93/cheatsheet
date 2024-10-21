@@ -106,12 +106,12 @@ git remote : La commande git remote est utilisée pour gérer les dépôts dista
 
 origin : origin est le nom par défaut donné au dépôt distant. C'est une convention couramment utilisée.
 
-git@github.com:SabSab93/Repo_Test.git : C'est l'URL du dépôt distant sur GitHub. Cette URL utilise le protocole SSH pour accéder au dépôt.
-****
+git@github.com:SabSab93/Repo_Test.git : C'est l'URL du dépôt distant sur GitHub. Cette URL utilise le protocole **SSH** pour accéder au dépôt.
+
 ```git
 git push -u origin main
 ```
-Permet de pousser les modifications vers le dépôt distant :
+Permet de pousser les modifications vers le dépôt distant (origin).
 ****
 
 #### 2ème cas : Pousser un repository existant 
@@ -123,36 +123,32 @@ git branch -M main
 git push -u origin main
 ```
 
+## Travailler sur un depôt existant 
 
+### Cloner un dépot existant 
+Possibilité de recuperer un projet d'un autre collaborateur git et de travailler en collobaration.
+- Pour cela nous devons recuperer le code grâce à la clé **SSH**. Dans le depôt se rendre dans <>code: copier URL de la clé SSH : <URL du dépôt en SSH>
+- Se rendre dans le terminal et taper :
 
+```git
+git clone <URL du dépôt en SSH> [nom du répertoire local]
+```
+git clone : est utilisée pour créer une copie locale d'un dépôt distant. Cette commande permet de télécharger l'intégralité du dépôt, y compris son historique de commits, ses branches, et ses tags, sur notre machine locale.
 
+[nom du répertoire local] : c'est optionnel, on renome le nom du répertoire dans lequel le dépôt sera cloné. Par defaut c'est le nom du dépot d'origin.
 
+### Travailler en collaboration
+A partir de là, nous pouvons travailler sur ce projet copié. Nous pouvions travailler en collobaration afin de partager le travail et de d'avancer le projet simultanément.
 
-
-
-
-
-
-Les commandes essentielles
-On créé un fichier qui contiendra notre projet et dans ce dossier nous creeons :
-- git init : initialiser notre repo (repertoire) avoir un .git dans le dossier. Premiere chose à faire initialiser le git en ajouter git init
-
-
-- git clone : récupérer le repo git de quelqu’un exemple : git clone « lien du repo ex dans github » « nom de dossier a renommer »
-- git status : pour voir les status
-- git diff :permet d’ouvrir la vue des diff dans le code entre avant après, ce sont la vu des modifications, il ouvre une autre page 
-- git log : affiche tous les commit avec le user et la date pour sortir « :q »
-
-
-- git add :tous les fichiers que j’ajoute dans mon git c’est un stage changes ce n’est pas réversible on peut repartir en arrière
-
-
-
-    - Possibilité de definir des rôles dans le cas où il y a une collobaration dans : Rules / Rulests: nous pouvons cocher 
+Sur settings 
+-   Dans Access/Collaborators :
+    -   Accepter l'invitation ou Add people pour ajouter un/des collaborateurs
+-   Dans branches : on redifnit les roles 
+    -   Add branch ruleset, cocher les elements ci-desous :
         - restrict deletions
         - require linear history
         - require deployments to succeed 
-        - require a pull request befoore merging
+        - require a pull request before merging
             - require approvals 1
             - require review from code Owners
             - dismiss state pull request approvals when new commits are pushed
@@ -160,5 +156,12 @@ On créé un fichier qui contiendra notre projet et dans ce dossier nous creeons
         - block force pushes
 
 
+****
+<h1 align="center">Definition</h1>
 
-SSH
+SSH : Un protocole qui permet de se connecter à des serveurs distants de manière sécurisée. Il utilise le chiffrement pour protéger les données transmises et pour authentifier les utilisateurs.
+
+Clé SSH : Une paire de clés cryptographiques utilisée pour authentifier les utilisateurs. La paire de clés comprend une clé publique et une clé privée.
+
+- Clé publique : Cette clé est partagée avec le serveur (par exemple, GitHub) et est utilisée pour chiffrer les données.
+- Clé privée : Cette clé reste sur votre machine locale et est utilisée pour déchiffrer les données. Elle doit être gardée secrète et sécurisée.
