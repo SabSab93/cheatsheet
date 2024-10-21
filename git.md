@@ -5,7 +5,7 @@ Git est un logiciel
 Origin github gitlab gitserver ce sont des origins c’est un onedrive
 Code CI/CD devops permet de faire des test 
 Github permet de mettre nos travaux accesible à tous 
-
+open source
 
 Il existe la doc officielle https://git-scm.com/
 
@@ -35,10 +35,15 @@ git config --global user.email johndoe@example.com
 
 - Se rendre sur notre GitHub.
 - Cliquez sur le bouton "+" en haut à droite et sélectionnez "New repository".
-- Donnez un nom au dépôt, ajoutez une description si nécessaire, et cliquez sur "Create repository".
+- Donnez un nom au dépôt, ajoutez une description si nécessaire, visibilité : public ou privé (ne pas hesiter à mettre les travaux en public), et cliquez sur "Create repository".
+- Une fois creer git nous facilite en indiquant les commandes à taper dans notre terminal afin de connecter notre projet local à l'origin :
+![Create repository cde](/image/GitPart/create_new_repo_or_push.png "Commande à taper lors d'une creation repo")
+
+[!NOTE] A savoir
 - Nous pouvons modifier les parametres de notre repo à tout moment dans la rubrique "setting"
     -   Renommer le repository
-    -   Modifier le nom de la branche principal "main" (_cf : depuis l'affaire George Floyd modification de la branche principale master en main._)
+    -   Modifier le nom de la branche principale "main" (_cf : depuis l'affaire George Floyd modification de la branche principale master en main._)
+    -   De changer la visibilité (privé/public)/ de supprime... dans la partie "Danger Zone"
 
 
 ### Initialiser un dépôt Git local
@@ -61,3 +66,16 @@ On créé un fichier qui contiendra notre projet et dans ce dossier nous creeons
 
 
 - git add :tous les fichiers que j’ajoute dans mon git c’est un stage changes ce n’est pas réversible on peut repartir en arrière
+
+
+
+    - Possibilité de definir des rôles dans le cas où il y a une collobaration dans : Rules / Rulests: nous pouvons cocher 
+        - restrict deletions
+        - require linear history
+        - require deployments to succeed 
+        - require a pull request befoore merging
+            - require approvals 1
+            - require review from code Owners
+            - dismiss state pull request approvals when new commits are pushed
+        - require statuts cheks to pass
+        - block force pushes
