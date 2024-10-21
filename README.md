@@ -1,8 +1,8 @@
-# cheatsheet B3
+# Sommaire Cheatsheet B3
 
-## Sommaire
-
-### LINUX
-### GIT
+## [Linux et les commandes](Installation_Manipulation_cde_Linux.md)
+## [Git Indroduction](Git_introduction.md)
+## [Git Manipulation](Git_introduction.md)
+## [TypeScript](TS.md)
 
 
