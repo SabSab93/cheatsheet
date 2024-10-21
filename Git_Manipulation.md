@@ -1,4 +1,4 @@
-<h1 align="center" style="color:pink">Manipulation git</h1>
+<h1 align="center" style="color:pink">Manipulation Git</h1>
 
 # Les commandes essentielles 
 
