@@ -1,6 +1,7 @@
-# Installation et manipulation des commandes sous Linux
+<h1 align="center" style="color:pink">Installation et manipulation des commandes sous Linux</h1>
 
-## Introduction
+
+# Introduction
 
 Possibilite de travailler sous macOs, Windows ou Linux.
 
@@ -8,7 +9,7 @@ Il est preferable de travailler sous le systeme d'exploitation <span style="colo
 
 Dire les avantages de Linux comparer aux autres.
 
-## Installation
+# Installation
 
 Et pour ce faire, nous devons configurer notre pc afin de creer un sous syteme.
 Linux est un <span style="color:red"> système d’exploitation</span> de type <span style="color:red">Unix</span> basé sur le <span style="color:red"> **noyau Linux**</span>.
@@ -27,7 +28,7 @@ Installer la distribution ubuntu dans Microsoft Store et le lancer.
 
 Ouvrir le terminal WSL.
 
-## Les commandes sous Linux
+# Les commandes sous Linux
 
 Une fois l'installation réalisée, nous avons manipulé quelques commandes afin de nous familiariser avec le terminal. Ci-dessous les commandes utilisées :
 

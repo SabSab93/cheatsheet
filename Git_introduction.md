@@ -1,5 +1,7 @@
-# Introduction à git
+<h1 align="center" style="color:pink">Introduction à git</h1>
 
+
+# Contexte
 
 Git est un système de contrôle de version distribué <span style="color:red">open source</span>, largement utilisé pour le développement de logiciels. Il a été créé par Linus Torvalds en 2005 pour gérer le développement du <span style="color:red">noyau Linux</span>. C'est un logiciel qui peut être utilisé et heberger par different Git server tel que <span style="color:red">GitHub</span> ou  <span style="color:red">GitLab</span>.
 
