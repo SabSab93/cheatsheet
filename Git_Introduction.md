@@ -1,4 +1,4 @@
-<h1 align="center" style="color:pink">Introduction à git</h1>
+<h1 align="center" style="color:pink">Introduction Git</h1>
 
 
 # Contexte
