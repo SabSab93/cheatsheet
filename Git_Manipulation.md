@@ -64,6 +64,7 @@ Permey de recuperer les modifications mises de côté dans la pile de stash.
 
 ```git
 git push  // initialement git push -u origin main -> par defaut branche main
+// A penser à se mettre sur la branche à push
 git push <branche>
 ```
 Est utilisée pour envoyer les commits locaux vers un dépôt distant
