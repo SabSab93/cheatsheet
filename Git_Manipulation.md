@@ -178,5 +178,6 @@ Git Flow est un modèle de gestion de branches pour Git qui aide à organiser le
 - [x] branch main : contient le code production toujours en état de prod.
 - [x] Eviter de travailler sur la branche main et créer d'autres branches
 - [x] Penser à commit le plus possible
-- [x] Utiliser rebase pour avoir la derniere version du main dans notre commits et gerer les conflits
+- [x] Utiliser rebase pour avoir la derniere version du main dans notre commits et gerer les conflits - git rebase avant chaque push !
 - [x] Eviter de merge en local, la fusion des branches se fera dans orign
+
