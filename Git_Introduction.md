@@ -1,4 +1,4 @@
-<h1 align="center" style="color:pink">Introduction Git</h1>
+<h1 align="center">Introduction Git</h1>
 
 
 # Contexte
@@ -165,7 +165,7 @@ Sur settings
 
 
 ****
-<h1 align="center" style="color:pink">Definitions</h1>
+<h1 align="center">Definitions</h1>
 
 Noyau Linux : Le composant central du système d'exploitation Linux. Il joue un rôle crucial en gérant les ressources matérielles et en fournissant une interface entre le matériel et les logiciels.
 ****

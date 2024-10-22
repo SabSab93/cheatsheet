@@ -1,4 +1,4 @@
-<h1 align="center" style="color:pink">Installation et manipulation des commandes sous Linux</h1>
+<h1 align="center">Installation et manipulation des commandes sous Linux</h1>
 
 
 # Introduction
@@ -11,7 +11,7 @@ Les avantages de Linux :
 -   Stabilité et Fiabilité 
 -   Open Source 
 -   Outils de Développement puissant (git)
--   Environnement de Développement : ombreux langages de programmation et frameworks sont développés et testés principalement sur Linux (exemple : Python, Ruby,...)
+-   Environnement de Développement : nombreux langages de programmation et frameworks sont développés et testés principalement sur Linux (exemple : Python, Ruby,...)
 -   Sécurité 
 -   Performance 
 -   Compatibilité avec les Serveurs
@@ -154,9 +154,9 @@ alias ll='ls -l'
  ```
 ****
 
-<h1 align="center"style="color:pink">Definitions</h1>
+<h1 align="center">Definitions</h1>
 
- Systeme d'exploitation : Logiciel système qui gère les ressources matérielles et logicielles d'un ordinateur. Il fournit une interface entre l'utilisateur et le matériel, permettant aux utilisateurs d'exécuter des applications et de gérer les ressources de manière efficace. Le système d'exploitation est responsable de la gestion des processus, de la mémoire, des périphériques d'entrée/sortie, des systèmes de fichiers, et de la sécurité. Exemples : Windows, macOS,...
+ Systeme d'exploitation : Logiciel système qui gère les ressources matérielles et logicielles d'un ordinateur. Il fournit une interface entre l'utilisateur et le matériel, permettant aux utilisateurs d'exécuter des applications et de gérer les ressources de manière efficace. Le système d'exploitation est responsable de la gestion des processus, de la mémoire, des périphériques d'entrée/sortie, des systèmes de fichiers, et de la sécurité. Exemples : Windows, macOS, Linux,...
 ****
  UNIX : est un système d'exploitation conçu pour être portable, multitâche et multi-utilisateur. Il a été développé pour fournir un environnement stable et efficace pour le développement de logiciels et la gestion des ressources matérielles.
  
