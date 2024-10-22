@@ -164,7 +164,7 @@ Lors du merge request on a 3 choix :
 
 
 
-## Pensez à la methodo : git flow 
+## Pensez à la methodo : git flow :sparkles:
 
 Git Flow est un modèle de gestion de branches pour Git qui aide à organiser le développement de logiciels de manière structurée et cohérente :
 
