@@ -142,6 +142,7 @@ git chekout [nom-de-la-branche]
 git rebase main
 ``` 
 On met a jour la branche en ce repositionnant à la derniere version du main
+**Toujours faire un rebase avant de push !**
 ![Illustration git rebase](image/GitPart/git_rebase_illustration.png "Illustration git rebase")
 
 
