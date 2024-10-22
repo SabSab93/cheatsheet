@@ -94,7 +94,7 @@ git revert <commit>
 ```
 
 Si on souhaite annuler un commit précis en creant un nouveau commit qui vient annuler les changements.
-![Illustration git revert](image/GitPart/git_revert_illustration.png "Illustration git resert")
+![Illustration git revert](image/GitPart/git_revert_illustration.png "Illustration git revert")
 
 ## Travailler avec des branches 
 
@@ -154,7 +154,7 @@ Lors du merge request on a 3 choix :
 
 Git Flow est un modèle de gestion de branches pour Git qui aide à organiser le développement de logiciels de manière structurée et cohérente :
 
-- [x] branch main : contient le code productionn toujours en état de prod.
+- [x] branch main : contient le code production toujours en état de prod.
 - [x] Eviter de travailler sur la branche main et créer d'autres branches
 - [x] Pensez à commit le plus possible
 - [x] Utiliser rebase pour avoir la derniere version du main dans notre commits et gerer les conflits
