@@ -3,8 +3,8 @@
 
 # Contexte
 
-Git est un système de contrôle de version distribué <span style="color:red">open source</span>, largement utilisé pour le développement de logiciels. Il a été créé par Linus Torvalds en 2005 pour gérer le développement du <span style="color:red">noyau Linux</span>. C'est un logiciel qui peut être utilisé et heberger par different Git server tel que <span style="color:red">GitHub</span> ou  <span style="color:red">GitLab</span>.
-Git est limité avec la problématique de gestion de gros fichier (exemple code pour des jeux video). Mais cela reste un outil puissant dans lequel nous pouvons pas travailler sans.
+Git est un système de contrôle de version distribué **open source**, largement utilisé pour le développement de logiciels. Il a été créé par Linus Torvalds en 2005 pour gérer le développement du **noyau Linux**. C'est un logiciel qui peut être utilisé et heberger par different Git server tel que **GitHub** ou  **GitLab**.
+Git est limité avec la problématique de gestion de gros fichier (exemple code pour des jeux video). Mais cela reste un outil puissant !
 
 
 Il existe la [documentation officielle](https://git-scm.com/)
@@ -42,7 +42,7 @@ git config --global user.email johndoe@example.com
 
 :bulb: A savoir
 
-Nous pouvons modifier les parametres de notre repo à tout moment dans la rubrique "Settings"
+Nous pouvons modifier les parametres de notre depot à tout moment dans la rubrique "Settings"
 -   Renommer le repository
 -   Modifier le nom de la branche principale "main" (_cf : Historiquement, la branche principale d'un dépôt Git était souvent nommée master, mais de plus en plus de projets utilisent main pour des raisons de neutralité et d'inclusivité suite à l'affaire George Floyd._)
 -   De changer la visibilité (privé/public)/ de supprimer... dans la partie "Danger Zone"
@@ -109,7 +109,7 @@ git remote : La commande git remote est utilisée pour gérer les dépôts dista
 
 origin : origin est le nom par défaut donné au dépôt distant. C'est une convention couramment utilisée.
 
-git@github.com:SabSab93/Repo_Test.git : C'est l'URL du dépôt distant sur GitHub. Cette URL utilise le protocole <span style="color:red">SSH</span> pour accéder au dépôt.
+git@github.com:SabSab93/Repo_Test.git : C'est l'URL du dépôt distant sur GitHub. Cette URL utilise le protocole **SSH** pour accéder au dépôt.
 
 ```git
 git push -u origin main
@@ -135,7 +135,7 @@ git push -u origin main
 
 ### Cloner un dépot existant 
 Possibilité de recuperer un projet d'un autre collaborateur git et de travailler en collobaration.
-- Pour cela nous devons recuperer le code grâce à la clé <span style="color:red">SSH</span>. Dans le depôt se rendre dans <>code: copier URL de la clé SSH : <URL du dépôt en SSH>
+- Pour cela nous devons recuperer le code grâce à la clé **SSH. Dans le depôt se rendre dans <>code: copier URL de la clé SSH : <URL du dépôt en SSH>
 - Se rendre dans le terminal et taper :
 
 ```git
