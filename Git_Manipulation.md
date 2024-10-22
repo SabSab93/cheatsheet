@@ -75,9 +75,22 @@ git pull
 ```
 Est utilisée pour récupérer les modifications d'un dépôt distant et les fusionner avec votre branche locale.
 
-Elle combine deux opérations en une seule : 
--   git fetch (qui récupère les modifications du dépôt distant) 
--   git merge (qui fusionne ces modifications avec votre branche locale).
+```git
+git fetch 
+```
+Récupère les modifications du dépôt distant
+****
+
+
+```git
+git chekout main
+git merge [nom-de-la-branche]
+```
+Fusionne les modifications avec la branche locale. _git merge se placer avant dans main et faire un git merge [nom-de-la-branche]_
+*****
+
+
+
 
 ## En cas de suppresions
 
@@ -121,6 +134,7 @@ On créer la branche tata et on se deplace
 
 ```git
 // se mettre dans la branche à remonter
+git chekout [nom-de-la-branche]
 git rebase main
 ``` 
 On met a jour la branche en ce repositionnant à la derniere version du main
@@ -156,6 +170,6 @@ Git Flow est un modèle de gestion de branches pour Git qui aide à organiser le
 
 - [x] branch main : contient le code production toujours en état de prod.
 - [x] Eviter de travailler sur la branche main et créer d'autres branches
-- [x] Pensez à commit le plus possible
+- [x] Penser à commit le plus possible
 - [x] Utiliser rebase pour avoir la derniere version du main dans notre commits et gerer les conflits
 
