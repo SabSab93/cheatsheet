@@ -132,7 +132,7 @@ Se deplacer à la branche toto
 ```git
 git checkout -b tata
 ``` 
-On créer la branche tata et on se deplace 
+On crée la branche tata et on se deplace 
 ****
 
 

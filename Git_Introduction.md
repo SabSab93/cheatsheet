@@ -163,6 +163,15 @@ Sur settings
         - require statuts cheks to pass
         - block force pushes
 
+### Git ignore
+
+Git ignore est un fichier utilisé dans les dépôts Git pour spécifier les fichiers et les répertoires que Git doit ignorer. Ce fichier est généralement nommé .gitignore et est placé à la racine du dépôt ou dans des sous-répertoires spécifiques.
+-   Lourd : exemple node-modules, base de données
+-   Environnement travail : node modules, DS Store (permet de gerer le systeme de fichier sous Mac)
+-   Execution : logs
+-   Sécurité : clé API / .env
+
+**_A ajouter les elements dans gitignore avant de travailler sur ces elements._**
 
 ****
 <h1 align="center">Definitions</h1>
