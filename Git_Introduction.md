@@ -13,7 +13,7 @@ Il existe la [documentation officielle](https://git-scm.com/)
 # Manipulation git
 
 Afin de travailler avec git nous pouvons suivre les étapes suivantes. Nous pouvons soit creer un nouveau projet, soit cloner afin de travailler en collaboration.
-Avant tout nous devons creer un compte et installer le logiciel git.
+Avant tout, nous devons creer un compte et installer le logiciel git.
 
 ## Créer un compte GitHub
 Creer un compte sur github.com et parametrer votre compte git avec une double autentification.
