@@ -87,7 +87,7 @@ Récupère les modifications du dépôt distant
 
 
 ```git
-git chekout main
+git checkout main
 git merge [nom-de-la-branche]
 ```
 Fusionne les modifications avec la branche locale. _git merge se placer avant dans main et faire un git merge [nom-de-la-branche]_
@@ -149,7 +149,7 @@ On met a jour la branche en ce repositionnant à la derniere version du main
 Exemple utilisation 
 
 ```git
-git chekout main
+git checkout main
 git add
 git commit -m
 git branch tata
