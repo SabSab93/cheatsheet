@@ -41,7 +41,7 @@ git log
 git log affiche tous les commit avec le user et la date
 Est  utilisée pour afficher l'historique des commits dans un dépôt Git.
 
-q -> pour fermer le log
+:q -> pour fermer le log
 ****
 
 
