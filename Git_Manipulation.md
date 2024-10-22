@@ -149,11 +149,13 @@ On met a jour la branche en ce repositionnant à la derniere version du main
 Exemple utilisation 
 
 ```git
+git chekout main
 git add
 git commit -m
-git chekout main
-git pull
+git branch tata
 git checkout tata
+git add
+git commit -m
 git rebase main
 git push branch
 // Se rendre sur GitHub et creer une merge request : mr
@@ -178,4 +180,3 @@ Git Flow est un modèle de gestion de branches pour Git qui aide à organiser le
 - [x] Penser à commit le plus possible
 - [x] Utiliser rebase pour avoir la derniere version du main dans notre commits et gerer les conflits
 - [x] Eviter de merge en local, la fusion des branches se fera dans orign
-
