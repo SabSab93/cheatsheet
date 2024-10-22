@@ -65,8 +65,9 @@ Permey de recuperer les modifications mises de côté dans la pile de stash.
 ```git
 git push  // initialement git push -u origin main -> par defaut branche main
 // A penser à se mettre sur la branche à push
-git push <branche>
+git push -u* origin <branche>
 ```
+*_si on ne souhaite plus retaper "origin <branche>" pour les prochaine fois sur cette branche_
 Est utilisée pour envoyer les commits locaux vers un dépôt distant
 --force ou -f : Force l'envoi des commits, même si cela écrase les commits existants sur la branche distante. A eviter ! 
 
@@ -175,4 +176,5 @@ Git Flow est un modèle de gestion de branches pour Git qui aide à organiser le
 - [x] Eviter de travailler sur la branche main et créer d'autres branches
 - [x] Penser à commit le plus possible
 - [x] Utiliser rebase pour avoir la derniere version du main dans notre commits et gerer les conflits
+- [x] Eviter de merge en local, la fusion des branches se fera dans orign
 
