@@ -71,6 +71,8 @@ Est utilisée pour envoyer les commits locaux vers un dépôt distant
 
 ****
 ```git
+// A penser à se mettre sur main
+git checkout main
 git pull
 ```
 Est utilisée pour récupérer les modifications d'un dépôt distant et les fusionner avec votre branche locale.
@@ -155,7 +157,7 @@ git push branch
 git checkout main
 git pull
 ```
-merge request : mr /  pull request : pr : c’est la fusion dans origin entre la branche main et la branche créée.
+merge request : mr(GitLab) /  pull request : pr (GitHub) : c’est la fusion dans origin entre la branche main et la branche créée.
 
 Lors du merge request on a 3 choix :
 - create a merge commit
