@@ -338,10 +338,11 @@ class Voiture {
     }
     getStatus(){
         return this.vendue ? "vendue" : "pas vendue"
+        //condition ? expressionSiVrai : expressionSiFaux;
     }
 }
 
-const voitureNoire = new Voiture ("noire", false)
+const voitureNoire = new Voiture ("noire")
 const voitureNoireEstVendueAvant = voitureNoire.getStatus()
 console.log("Avant vente La voiture noire est " + voitureNoireEstVendueAvant)
 
