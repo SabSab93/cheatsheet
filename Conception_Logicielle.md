@@ -91,5 +91,161 @@ Penibilité au travail : il faut produire vite et mal, pb de repasser dessus san
 C'etait mieux avant VS il faut tout changer tout le temps !
 
 
+## Programmation structurée vs POO
+
+POO : architecture du systeme est dictée par la struture du probleme: exemple un humain avec une taille, un poids
+
+Structurée = fonctions qui modifient de la date, l'architecture du systeme est dictée par la réponse au probleme
 
 
+Le livrable qu"on arrive rapidement cest avec le POO
+- l'identité
+- les attributs
+- les méthodes 
+
+La difficulté de cette modélisation consiste à créer une representation abstraite, sous forme d'objets,d'entités ayant une existence matérielle (chien, voiture, ampoule, personne,...) ou bien virtuelle (client, temps,...).
+
+
+Héritage : transmission de caracteristique d'un objet à un enfant (attributs + methodes)
+
+Polymorphisme : 
+
+A COMPLETER !!!
+
+
+## Historique 
+
+A COMPLETER !!!
+
+Smalltalk 1er language, puis evolution C+++ langage C + POO apparu en 1982
+et java apparait 20 ans apres
+
+
+## UML
+
+Unified Modelin Language est né d'un effort de convergence. Il existe maintenant d'autres langages de modélisation : 
+- plantUML : https://plantuml.com/fr/ plus complet et plus recent que Mermaid : probleme fortement lié à java mais fonctionne avec la bonne extension
+- BPM
+- SysML
+- Archimate
+
+A regarder :  
+
+C'est un peu comme les gitflow, il y a des variantes mais UML reste tres utilisé
+
+Mermaid qu'on va utiliser, on va creer des graphiques a partir de code
+
+
+## Mermaid comme alternative
+
+Markdown + Mermaid = UML et tout ca avec du git hub 
+
+https://www.mermaidchart.com/landing?utm_source=google_ads&utm_medium=primary_search&utm_campaign=mermaidecosystemfocus-G&gad_source=1&gclid=Cj0KCQjwveK4BhD4ARIsAKy6pMLQJO05CoDLMsOO7selpQw9g2Y0-MoT8Am_KXCGcszvFJ_IeELS85MaAkgtEALw_wcB
+
+
+ dbdiagram https://dbdiagram.io/home
+
+
+Differentes types de diagrammes pour la matiere :
+-   use case
+-   Sequence
+-   Class
+
+Pas de MCD : modele conceptiel de donnée
+
+# TP tunnel d'achat
+
+-   creation de projet
+-   presentation au reste de la classe
+-   participation à la confrontation de nos idées face aux autres
+
+choisir une partie du tunnel d'achat et dle modeliser en UML selon vos idées / préfences.
+
+Etre capable de le presenter à l'oral et de confronter vos idées avec celles des autres
+
+Dans une approche en cycle en V, comment integrer ce tunnel d'achat dans un projet de site e-commerce ? on ne va pas jusqu'à l'étape de codage. 
+
+on part du use case 
+
+en passant par le diagramme de séquence
+
+jusqu'au diagramme de classe et la POO
+
+jusqu'au MCD
+
+Undev n'est pas là pour coder. C'est un outil au service du métier. Il doit comprendre le métier et **améliorer les processus**. 
+
+La technique est un moyen, pas une fin. Le role de PO
+
+
+# Use case
+
+Un "use case" (ou "cas d'utilisation" en français) est une description des interactions entre un utilisateur (ou un autre système) et un système logiciel pour atteindre un objectif spécifique. 
+
+Les use cases sont souvent utilisés dans le cadre de l'ingénierie logicielle et de la conception de systèmes pour capturer les exigences fonctionnelles d'un système.
+
+Les use cases sont souvent représentés graphiquement à l'aide de diagrammes de cas d'utilisation, qui montrent les acteurs et les use cases ainsi que leurs relations. Ils sont également décrits textuellement dans des documents de spécification des exigences.
+
+exemple actor=coiffeur : ces scenarios sont coiffer / prise RDV /encaisser / nettoyer
+
+On veut livrer un logiciel (prise de rendez-vous et encaisser) donc on devra retirer les scenario qui ne rentre pas dans le besoin.
+reste : prise rdv / encaisser
+
+on ressors un use case : lister dispo / prise RDV anonyme ou specifique /encaisser 
+
+Acteurs : Représentent les entités externes qui interagissent avec le système. Peut etre plusieurs suivant les scenarios qu'ils ont, cela peut prioriser nos etapes
+
+
+2eme etape diagramme de sequence
+
+Un diagramme de séquence est un type de diagramme utilisé dans la modélisation des systèmes, notamment dans le cadre de l'UML (Unified Modeling Language). Il représente les interactions entre différents objets ou acteurs dans un système au fil du temps. Les diagrammes de séquence sont particulièrement utiles pour visualiser les flux de messages entre les objets et pour comprendre la chronologie des événements dans un scénario spécifique.
+
+![diagramme de sequence](image/ConceptionLogiciellePart/diagramme_de_sequence.png)
+
+https://laurent-audibert.developpez.com/Cours-UML/?page=diagrammes-interaction#L7-2
+
+![diagramme de communication](image/ConceptionLogiciellePart/diagramme%20de%20communication.png)
+
+![diagramme de sequence](image/ConceptionLogiciellePart/UML_-_Diagramme_de_séquence_-_Exemple.png)
+
+
+
+un acteur peut s'auto appeler 
+
+
+dans les classes il y a attribut et methode
+
+```typescript
+class Voiture {
+    constructor(
+        public couleur: string,
+        public vendue: boolean = false
+    ){}
+
+    rouler (){
+        console.log("je roule")
+    }
+
+    vendre(){
+        this.vendue = true
+    }
+    getStatus(){
+        return this.vendue ? "vendue" : "pas vendue"
+    }
+}
+
+const voitureNoire = new Voiture ("noire", false)
+const voitureNoireEstVendueAvant = voitureNoire.getStatus()
+console.log("Avant vente La voiture noire est " + voitureNoireEstVendueAvant)
+
+voitureNoire.vendre()
+const voitureNoireEstVendue = voitureNoire.getStatus()
+
+console.log("La voiture noire est " + voitureNoireEstVendue)
+
+
+const voitureRouge = new Voiture ("rouge")
+voitureRouge.rouler()
+const voitureBleu = new Voiture ("bleu")
+
+```
