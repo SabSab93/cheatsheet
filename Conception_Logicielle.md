@@ -290,7 +290,56 @@ Cours explicatif : [ici](https://laurent-audibert.developpez.com/Cours-UML/?page
 
 ![Diagramme de sequence ](image/ConceptionLogiciellePart/exemple_diagramme_sequence_voiture.png)
 
+sequenceDiagram
+    participant PGM 
+    participant Animal
 
+    PGM->>Animal: creer chat (cat, Barsik)
+    Animal->>PGM: Cat et Barsik
+    PGM ->> Animal: le transformer en chien
+    Animal ->> Animal : changeToDog
+    Animal ->> PGM : OK
+    PGM ->> Animal: voice
+    Animal ->>Animal : 
+    Animal ->> PGM: Afficher (type+nom)
+    PGM ->> Animal : getMyName()
+    Animal ->> PGM : Barsik
+    PGM ->> PGM : afficher 
+    
+```ts
+
+class Animal {
+  public name: string;
+  public type: string;
+ 
+  constructor(type: string, name: string) {
+      this.name = name;
+      this.type = type
+  }
+  voice() {
+      console.log(`Cat ${this.name} says myau`);
+  }
+ 
+  transformToDog() {
+      this.type = "Doggy";
+  }
+ 
+  ohNahnahWhatsMyName() {
+    return this.name;
+  }
+ 
+}
+ 
+const cat = new Animal("Cat", "Barsik");
+// Transition animale
+cat.transformToDog();
+cat.voice();
+ 
+const animalName = cat.ohNahnahWhatsMyName();
+console.log("nom de l'animal après transformation : " + animalName);
+```
+
+Auto appelle ne se stock pas une fonction sans return et surtout sans une variable const
 # 3eme etape - Diagramme de classe
 
 Le diagramme de classe est une représentation visuelle de la structure d'une classe. Il montre les attributs et les méthodes de la classe, ainsi que leurs types et visibilités. Ce diagramme peut être utilisé pour comprendre la structure de la classe et pour documenter le code.
@@ -315,6 +364,20 @@ Voiture
 + rouler(): void : Une méthode publique qui affiche "je roule".
 + vendre(): void : Une méthode publique qui met à jour l'attribut vendue à true.
 + getStatus(): string : Une méthode publique qui retourne le statut de la voiture ("vendue" ou "pas vendue").
+
+
+### Ecriture du code sur mermaid:
+
+classDiagram
+    class Personne {
+        name: string
+        type: string
+        transformToDog(): void
+        voice(): void
+        OhnananWhatsMyName(): void
+    }
+
+
 
 # 4eme etape - POO
 
@@ -357,3 +420,66 @@ voitureRouge.rouler()
 const voitureBleu = new Voiture ("bleu")
 
 ```
+
+Tous les attributs par defaut on le met en privé c'est la porté des variables. 
+Les methodes sont la plupart du temps public
+
+si on met une methode en privé : de l'exterieur si on veut acceder à la methode on ne peut pas 
+
+Les attributs avec des _ devant afin de les distinguer avec les methode si on met un attribut en private exemple _type ; on creer une "methode" get :  get type(){ return this;_type}
+On appelle ainsi : cat.type 
+
+le set est pour attribuer un nouveau attribut afin de changer son comportement 
+```ts
+set type(newType :string){
+    this._type = newType
+}
+cat.type ="Grenouille"
+
+```
+
+```ts
+class Animal {
+  public name: string;
+  private _type: string;
+ 
+  constructor(type: string, name: string) {
+      this.name = name;
+      this._type = type
+  }
+  
+  voice() {
+      console.log(`Cat ${this.name} says myau`);
+  }
+ 
+  transformToDog() {
+      this._type = "Doggy";
+  }
+ 
+  ohNahnahWhatsMyName() {
+    return this.name;
+  }
+ 
+  get type(){
+    return this._type
+  }
+ 
+  set type(newType: string){
+    this._type = newType
+  }
+ 
+}
+ 
+const cat = new Animal("Cat", "Barsik");
+// Transition animale
+cat.transformToDog();
+cat.voice();
+ 
+cat.type = "Grenouille"
+cat.name = "Toto"
+ 
+const animalName = cat.ohNahnahWhatsMyName();
+console.log("nom de l'animal après transformation : " + animalName);
+```
+
+
