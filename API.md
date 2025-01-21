@@ -68,3 +68,15 @@ Comment tester une API ?
 - Rest Client VScode : on peut ecrire les requete la ou on a le code dans VS marche que dans les fichier HTTP.  genere des fichier un peur comme md dans le dossier de notre tavail
 - Bruno : nouveau c'est un juste milieu entre postman et insomia et RestClient 
 - fectch avec navigateur: possibilite mais seulement faire des get
+
+
+Les Headless CMS
+
+CMS = Content Management System
+
++Headless = sans interface graphique
+= API sans coder
+
+C'est Wordpress sans le front/Theme --> On va utiliser **Strapi**
+
+Head c'est l'interface 
