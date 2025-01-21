@@ -45,7 +45,7 @@ pluralApiId = restaurant**s**
 
 Les méthodes PUT et PATCH ont des significations différentes :
 
-- PUT, remplace les données par celle qui sont envoyées dans la requête.
+- PUT, remplace les données par celle qui sont envoyées dans la requête. Tous les elem,nts
 - PATCH, permet la modification partielle d'une ressource en fusionnant les données envoyées avec les données déjà présentes ou grâce à l'utilisation d'opération de modification.
 ```nodeJS
 const express = require('express)
@@ -80,3 +80,32 @@ CMS = Content Management System
 C'est Wordpress sans le front/Theme --> On va utiliser **Strapi**
 
 Head c'est l'interface 
+
+
+### TP Strapi Cinema
+
+
+- recuperer une liste de films recents
+- recupere les details du deuxieme film de la liste
+- recupere les acteurs d'un film
+- recupere les informattions d'un acteur
+
+
+un des headeur importnat est le content type  pour avoir le type de donnée qu'on appelle
+
+lancer plusieurs get ou bien lancer un page web on voit plein d'element lancés en meme temps c'est pour jouer sur la performance et une histoire de paralelelisme
+c'est interet du rest avoir de petites requetes à l'opposé de graphql
+
+uuid : les id sont souvent en chaine de caractere pour eviter une colision et avoir de2 meme id on utilsie les timestamp. On peut egalement paralellisé les bases de donnéess.  c 'est pour ça que le timestamp ajout une heure et d'autre element
+
+
+
+populate=* voir les dependance
+
+
+lecture de requete
+
+
+refaire le meme exo en graphql
+
+aller dans marketplace : documentation et graphql dans strapi a installer

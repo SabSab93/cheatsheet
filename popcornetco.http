@@ -1,0 +1,191 @@
+### Recuperation script d'installation
+GET https://api.themoviedb.org/3/trending/movie/day?language=en-US
+ 
+ 
+ 
+### Recuperer mon profil sur movie db
+GET https://api.themoviedb.org/3/account/21765372
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA'
+
+
+### Recuperer les favoris movies 
+GET https://api.themoviedb.org/3/account/21765372/favorite/movies?language=en-US&page=1&sort_by=created_at.asc' 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA' 
+
+### Voir les voitures
+GET http://localhost:1337/api/voitures
+
+### Voir la voiture kia
+GET http://localhost:1337/api/voitures/n1ybvuopkwe47fbwzpeize1b
+
+### Creer une nouvelle voiture Toyota
+POST http://localhost:1337/api/voitures
+Content-Type: application/json
+
+{
+    "data": {
+    "name":"Toyota",
+    "immatriculation_date": "2012-12-10"
+    }
+}
+
+### Mettre à jour la Toyota changer 2012 à 2010
+PUT http://localhost:1337/api/voitures/f86ybvhh4e0c4yqoi40jhhru
+Content-Type: application/json
+
+{
+    "data": {   
+    "immatriculation_date": "2010-12-10"
+    }
+}
+
+### DELETE à jour la Toyota creer en 2 fois
+DELETE  http://localhost:1337/api/voitures/ktsg6nhn5aqe9zurrqn17ed6
+
+
+
+### Voir Api de Thomas
+GET http://192.168.26.11:1337/api/voitures
+Content-Type: application/json
+
+
+### Recuperer mon profil sur movie db
+GET https://api.themoviedb.org/3/account/21765372
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA
+
+### la liste des films
+GET  https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA
+
+
+### recuperer une liste de films recents
+GET  https://api.themoviedb.org/3/movie/latest 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA
+
+### recupere les details du deuxieme film de la liste
+GET  https://api.themoviedb.org/3/movie/762509?language=en-US
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA
+
+### recupere les acteurs d'un film
+GET  https://api.themoviedb.org/3/movie/912649/credits?language=en-US
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA
+
+
+### recupere les informations d'un acteur
+GET  https://api.themoviedb.org/3/person/2524?language=en-US' \
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA
+
+
+### Creation base de données
+POST http://localhost:1337/api/movies
+Content-Type: application/json
+
+{
+    "results": {
+    "title":"Coralie et les monstres sous le lit"
+    }
+}
+
+### recupere les films Harry Potter
+GET  https://api.themoviedb.org/3/search/movie?query=harry%20potter&include_adult=false&language=en-US&page=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA
+
+
+### recupere les films Harry Potter
+GET  https://api.themoviedb.org/3/search/movie?query=harry%20potter&include_adult=false&language=en-US&page=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA
+
+### Tester notre strapi
+GET http://localhost:1337/api/movies
+Content-Type: application/json
+
+
+### Trier les 6 premiers films par odre alpha
+GET http://localhost:1337/api/movies?sort=title:asc&pagination[pageSize]=6
+Content-Type: application/json
+
+
+### relation a mettre 
+GET GET http://localhost:1337/api/movies?populate=*
+Content-Type: application/json
+
+### Tester notre strapi / 
+GET http://localhost:1337/api/movies/p2pm0bcocxw2lfv5om7aid0w
+Content-Type: application/json
+
+
+### Compter le nombre de films 
+GET http://localhost:1337/api/movies.count()
+Content-Type: application/json
+
+
+
+### Ajout de relation
+
+PUT http://localhost:1337/api/movies/olxo7z8ri1zdy6htjx627bua
+Content-Type: application/json
+
+{"data": {
+
+    "title": "Harry Potter",
+    "movie_date": "2015-12-31",
+    "actors": [16, 6, 4] 
+    }
+}
+
+
+
+### Verifier Harry potter et les acteurs
+GET http://localhost:1337/api/movies/olxo7z8ri1zdy6htjx627bua?populate=*
+Content-Type: application/json
+
+
+### Verifier Harry potter et les acteurs
+GET http://localhost:1337/api/movies?filters[title]=Harry%20Potter"
+Content-Type: application/json
+
+
+### Voir les films Bruce Willis
+GET http://localhost:1337/api/movies?filters[actors][lastname]=Willis&populate=*
+Content-Type: application/json
+
+
+### Recuperer le nombre de movies
+GET http://localhost:1337/api/movies?pagination
+Content-Type: application/json
+
+
+### Recuperer le nombre de movies
+GET http://localhost:1337/api/movies?pagination
+Content-Type: application/json
+
+
+
+### Vero
+GET http://10.112.134.149:1337/api/movies
+Content-Type: application/json
+
+### Melissa modifier les noms de director
+PUT http://10.112.134.149:1337/api/movies/omawdryv4gypogdkfsdesuwh
+Content-Type: application/json
+
+{"data": {
+    
+      "title": "The Lord of the Rings: The War of the Rohirrim",
+      "description": "A sudden attack by Wulf, a clever and traitorous lord of Rohan seeking vengeance for the death of his father, forces Helm Hammerhand, the King of Rohan, and his people to make a daring last stand in the ancient stronghold of the Hornburg.",
+      "releaseDate": "2024-12-05",
+      "director": "Sabrina Hammadi"
+      }
+}
+
+
