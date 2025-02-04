@@ -17,6 +17,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZ
 ### Voir les voitures
 GET http://localhost:1337/api/voitures
 
+
 ### Voir la voiture kia
 GET http://localhost:1337/api/voitures/n1ybvuopkwe47fbwzpeize1b
 
@@ -26,7 +27,7 @@ Content-Type: application/json
 
 {
     "data": {
-    "name":"Toyota",
+    "name":"Peugeot",
     "immatriculation_date": "2012-12-10"
     }
 }
@@ -111,7 +112,7 @@ Content-Type: application/json
 
 
 ### Trier les 6 premiers films par odre alpha
-GET http://localhost:1337/api/movies?sort=title:asc&pagination[pageSize]=6
+GET http://localhost:1337/api/movies?sort=title:asc&pagination[start]=0&pagination[limit]=6
 Content-Type: application/json
 
 
@@ -188,4 +189,36 @@ Content-Type: application/json
       }
 }
 
+### Mettre une autentifiaction
+POST http://localhost:1337/api/auth/local
+Content-Type: application/json
 
+{
+    "identifier": "sabrina@gmal.com",
+    "password": "toto1234"
+}
+
+###
+
+###
+
+POST http://localhost:1337/api/auth/local
+Content-Type: application/json
+ 
+{
+  "identifier": "sabrina@gmail.com",
+  "password": "toto1234"
+}
+
+### GET avec l'autentification du user Sabrina 
+POST http://localhost:1337/api/voitures
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM3NjI4MjE3LCJleHAiOjE3NDAyMjAyMTd9.izH0QjbMA4ofv6jpXGPBlDyXPomiT4CeUBy7Is1UM80
+
+{
+    "data": {
+    "name":"Mercedes",
+    "immatriculation_date": "1970-12-10"
+    }
+}
+## 

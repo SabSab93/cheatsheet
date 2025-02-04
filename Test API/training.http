@@ -1,0 +1,147 @@
+///themoviedb 
+
+### Recuperation script d'installation
+GET https://api.themoviedb.org/3/trending/movie/day?language=en-US
+
+
+### Recuperer mon profil sur movie db
+GET https://api.themoviedb.org/3/account/21765372
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA
+
+### Recuperer les favoris movies 
+GET https://api.themoviedb.org/3/trending/movie/day?language=en-US
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA
+
+
+### la liste des films
+GET https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=en-US&page=1&sort_by=popularity.desc
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA
+
+
+
+### recuperer une liste de films recents
+GET  https://api.themoviedb.org/3/movie/latest 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA
+Content-Type: application/json
+
+
+
+
+### recupere les details du deuxieme film de la liste
+GET  https://api.themoviedb.org/3/movie/latest 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA
+Content-Type: application/json
+
+
+
+
+### recupere les acteurs d'un film  id : 974576
+GET https://api.themoviedb.org/3/movie/974576/credits?language=en-US'
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA
+
+### recupere les films Harry Potter
+GET https://api.themoviedb.org/3/search/movie?query=Harry%20Potter&include_adult=false&language=en-US&page=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmQxZGM0NzVmZTVhNzcwYjZjZmU2ZjVjZjZkMWU2MyIsIm5iZiI6MTczNzQ0ODA4MS41MTAwMDAyLCJzdWIiOiI2NzhmNWE5MTgzODUzMjFiY2RmMDc5NDgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KoWX0aDdJiZ73papVnhXGKi3f2nSuku_OBxEEubCaLA
+
+
+///////////// STRAPI /////////////
+
+
+### Voir des livres 
+GET http://localhost:1337/api/livres
+
+
+### Voir un livre en particulier
+GET http://localhost:1337/api/livres/rvnv1sydqqatp6jhglacwhkv
+
+### Creer un nouveau livre
+POST http://localhost:1337/api/livres
+Content-Type: application/json
+
+{
+    "data": {
+        "title": "Comment devenir riche",
+        "author": "Xia",
+        "parution_date": "1870-04-01",
+        "lecteurs":[2]
+    }
+}
+
+### Mettre à jour le livre Harry Potter changer 2012 à 2010
+PUT http://localhost:1337/api/livres/k8gnpmm058d8u60a18siw058
+Content-Type: application/json
+
+{
+    "data": {
+        "title": "L'étranger",
+        "author": "Albert Camus",
+        "parution_date": "1870-04-01"
+    }
+}
+
+### DELETE à jour le livre Les enfants de minuit creer en 2 fois
+
+
+DELETE http://localhost:1337/api/livres/k8gnpmm058d8u60a18siw058
+Content-Type: application/json
+
+
+
+
+### Trier les 6 premiers livres par odre alpha
+GET http://localhost:1337/api/livres?sort=title:asc&pagination[start]=0&pagination[limit]=6
+Content-Type: application/json
+
+
+
+### Creer de nouveau lecteur
+POST http://localhost:1337/api/lecteurs
+Content-Type: application/json
+
+{
+    "data": {
+        "name": "Guerroudj Biscotte",
+        "date_naissance": "1993-09-10",
+        "livres": [1,2]
+    }
+}
+
+
+### Ajout de relation
+PUT http://localhost:1337/api/localhost:1337/api/livres/tb77hbyx7h5l28qm1u3nv8c0
+
+{
+    "data": {
+        "title": "L'étranger",
+        "author": "Albert Camus",
+        "parution_date": "1870-04-01",
+        "lecteurs":[1]
+    }
+}
+
+
+
+### Voir pour chaque livre les lecteurs
+GET http://localhost:1337/api/livres?populate=*
+### Verifier Harry potter et les lecteurs
+
+GET http://localhost:1337/api/livres?filters[title][$eq]=Harry%20Potter&populate=*
+### Voir les livres de Sabrina
+GET http://localhost:1337/api/lecteurs?filters[name][$eq]=Hammadi Sabrina&populate=*
+
+
+### Recuperer le nombre de livre
+GET http://localhost:1337/api/livres?pagination
+
+### Mettre une autentifiaction pour Amelle
+
+GET http://localhost:1337/api/user
+Content-Type: application/json
+Authorization: Bearer a5fddeca9f5966bada622c961a751514daf73da042aa78a1f02966999a25504d18e27bae35ba2672ead4cef41847b761b0dafbea996a863707836ea5b9e6e51e560a2d758811d02e5a83bf24dd82e6df1a1cf1fb9c0ae2973dd3a39806ef6b3ac5958d2cd0b6a2711bbababc8a327b357d6bc0cc51785008c0be05f61f30758e
+
+{
+  "identifier": "amelle@gmail.com",
+  "password": "toto1234"
+}
+
+### GET avec l'autentification du user Amelle 
