@@ -247,7 +247,7 @@ Côté autorisation est ce qu'il a le droit de... ? exemple Thomas peut-il recup
 -   Autentificateur google authentifactor, microsoft c'est une autentification ephémere, qui est beaucoup mieux, avec une notion d'instantaneité, le mtp ne reste pas longtemps, coté securité plus plus.
 -   single SSO : sign in with google / github .... : beaucoup plus safe d'utiliser cette methode, gagner du temps en terme UX :
             + RGPD, connecté plus vite , SSO un mot de passe securisé a fond
-            - probleme si on accede à un compte on a risque d'acceder aux autres / autre problematique : force utilisateur d'avoir un compte lié au sign ,de plus,  on a une dependance sur ça exemple : Google recupere certaines info comme les frequence utilisation de notre site.
+            - probleme si un compte est piraté il ya un risque d'avoir acces aux autres comptes / autre problematique : force utilisateur d'avoir un compte lié au sign ,de plus,  on a une dependance sur ça exemple : Google recupere certaines info comme les frequence utilisation de notre site.
 
 - passkeys : un passkey est une clé cryptographique conçue pour remplacer les mots de passe.Comme les anciens mots de passe pouvaient facilement être volés, piratés ou même devinés, les passkeys fonctionneraient à un niveau complètement différent, avec l'authentification par paires de clés publique-privée.
 Contrairement à un mot de passe, les passkeys ne peuvent pas être partagés, mémorisés ou écrits. Ils sont donc beaucoup moins vulnérables aux types d'attaques qui visent généralement les systèmes basés sur des mots de passe.
@@ -263,11 +263,11 @@ hyper fort !!! Tres puissant
 
 Besoin :
 
-identifiant : email, pseudo, ... mais pas thomas + laforge + age + ...
-mot de sécurité : mot de passe, clé, certificat, ...
-KYC ? know your customer : besoin de savoir que c'est bien cette personne, justificatif gros process exemple Aribnb et Blablacar qui demande une verifiaction identité apres pour completer le profil
-aider à la connexion : OAuth, SSO, ...
-retrouver / modifier ses données d'authentification
+- identifiant : email, pseudo, ... 
+- mot de sécurité : mot de passe, clé, certificat, ...
+- KYC ? know your customer : besoin de savoir que c'est bien cette personne, justificatif gros process exemple Aribnb et Blablacar qui demande une verifiaction identité apres pour completer le profil
+- aide à la connexion : OAuth, SSO, ...
+- retrouver / modifier ses données d'authentification
 
 ##### Basic Auth
 Envoi de l'identifiant et du mot de passe à chaque requête
@@ -280,16 +280,16 @@ Il existe autre que bearer c'est basic : L'authentification d'accès de base est
 https://blog.behrouze.com/basic-auth 
 
 Basic:
-man is in the middle : web different passage et requete les pacakge envoyé dans les requete doivent etre crypté.
+man is in the middle : dans le web il y a different passages et requete sous forme de pacakges envoyés dans les requete qui doivent donc etre crypté.
 Probleme : c'est que le code doit etre stocké quelque part; pour stocker un element dans un site localstorage...
 
 
 
 ##### Token JWT
 Envoi d'un token à chaque requête
-Le token est généré par le serveur
-Le token est stocké par le client
-Le token est valide pendant un certain temps
+- Le token est généré par le serveur
+- Le token est stocké par le client
+- Le token est valide pendant un certain temps
 
 On arrive sur un site on se login, etc.... quand on change de page on ne redemande pas de mot de passe. 
 C'est grace au token, qui est transmis au client et conserver. 
@@ -306,22 +306,25 @@ Le token est confié a un tiers de confiance.
 
 ### Qu'est ce qu'un hash ?
 
-Tres rapide a generer c'est un algo, c'est unique c'est si pareil ça s'appelle une collision
+Tres rapide a generer c'est un algo, c'est unique, en cas de doublon on parle de collision
+
+Les collisions de hachage se produisent lorsque deux entrées différentes produisent le même résultat de hachage. Les collisions de hachage sont certes rares, mais elles constituent un risque pour la sécurité, car un pirate pourrait délibérément créer un mot de passe différent qui génère le même hachage que le mot de passe original, ce qui lui permettrait d’obtenir un accès non autorisé.
+Le hashage est : 
 - offusquer/cache
-- irreversible
+- irreversible : Il s’agit d’une fonction à sens unique.Il est impossible de faire de l’ingénierie inverse et de retrouver le mot de passe original à partir de sa forme hachée. 
 - rapide
 - unique : unicité des H
 
-exemple qu'on voit hash : jeu video, commit.
+exemple qu'on voit en hash : jeu video, commit.
 
 Une fonction de hachage est une **fonction** qui, à partir d'une donnée fournie en entrée, calcule **très rapidement** une **empreinte unique** de cette donnée,
 de sorte que toute modification de la donnée entraîne une modification **significative** de l'empreinte (la sortie).
 
   Exemples :
 
-  - watcher
-  - bitcoin : avce la blockchain block c'est stocké des informations dedans, suite d'operation qui se transement de l'argent , il y a une notion de hash, il faut hasher les informations et il faut miner les blocks il y a un truc aleatoire qu'on va lancer autant de fois jusqu'au tomber sur plein de 0 au debut. 
-  La on securise le block; puis on block suivant on ajoute le hash du block 1 et on inject dans le hash du block 2 et on doit retrouver le hash du block 2. 
+  - watcher :
+  - bitcoin : avce la blockchain block c'est stocké des informations dedans, suite d'operation qui se transmettent de l'argent , il y a une notion de hash, il faut hasher les informations et il faut miner les blocks cad qu'on lance un aleatoire autant de fois jusqu'au tomber sur plusieurs 0 au debut. 
+  La on securise le block; puis on passe au block suivant on ajoute le hash du block 1 et on inject dans le hash du block 2 et on doit retrouver le hash du block 2. 
   Donc impossible de revenir en arriere si on casse le hash le bitcoin vont 0.
   - mot de passe : pas de moyen de revenir en arriere avec des mot de passe hash
   - commit 
@@ -331,7 +334,7 @@ de sorte que toute modification de la donnée entraîne une modification **signi
 L'attaque des hash c'est par dictionnaire, si on trouve un hash avec un mtp ex toto et dans la base de donnée il y a le meme mtp alors on a le meme hash.
 Pour contrer cette attaque il faudra ajouter un element pour securisé le hash exemple de la blockchain (aleatoire + recupere le hash d'avant)
 
-On genere donc le hash du mtp + un truc aleatoire / difficile de revenir à la base 
+On genere donc le hash du mtp + un truc aleatoire (salt) / difficile de revenir à la base 
 
 
 ### Qu'est ce qu'un JWT
@@ -345,14 +348,14 @@ https://jwt.io/
 - JSON Web Token
 - Un token est formé de 3 parties séparées par un point
   - La première partie est l'entête (type de token, algorithme de hashage)
-  - La deuxième partie est le payload (données) : c'est la donné qu'on veut injecter dans le token , meta doonée iat c'est la dtae de creation du token
+  - La deuxième partie est le payload (données) : c'est la donné qu'on veut injecter dans le token , meta donnée c'est la data de creation du token
   dans les meta donnée à voir les librairies : https://jwt.io/libraries
 
   - La troisième partie est la signature (hash de la première et deuxième partie) c'est la partie la plus importante car les 2 1eres parties sont visibles. 
-  il reprend les elemnts du token, le hash et ajout un autre element secret que nous seul connaisont.
-  partie decod
-  partie verify
-Ce truc secret est un enjeu de secrurité. 
+  il reprend les elemnts du token, le hash  ajout un autre element secret que nous seul connaissont.
+ -  partie decod
+  - partie verify
+Ce truc secret est un enjeu de securité. 
 
 - Bearer (mot clé a inscrire)
 
@@ -363,7 +366,7 @@ En quoi HTTPS permet de sécuriser l'authentification ?
 
 - HTTPS = HTTP + SSL
 
-Ca nous sauve de tout ?
+
 
 
 ## JWT avec express
@@ -381,10 +384,10 @@ jwt.verify(tokenWithoutBearerAndSpaceFromAuthorizationHeader, "your-secret-key-d
 ## Mot de passe
 
 C'est quoi un bon mot de passe,
-- un mot de passe pas reutiliser, 
+- un mot de passe pas reutilisé, 
 - long avec chaine de charactere, 
 - changer regulierment, 
-- pas sauvegarder autre endroit, 
+- pas sauvegardé autre endroit, 
 - ne pas savoir le mot de passe
 - ne pas le confier
 
@@ -392,10 +395,10 @@ Gestionnaire de mot de : bitwarden
 lastPass / Dashlane
 
 
-long + caractere ... c'est brut force. Pour eviter les essai repetitives toutes les combinaisons, on evite les date anniversaire et les nom de chat.
+long + caractere ... c'est brut force. Pour eviter les essais repetitives toutes les combinaisons, on evite les date anniversaire et les nom de chat.
 
-lorsque je change de mot de passe il ne change pas 
-si mot de passe deja utilisé sur un site il conserve les hash et verifie les hash.
+Lorsque je change de mot de passe il ne change pas 
+si mot de passe est deja utilisé sur un site il conserve les hash et verifie les hash.
 
 scrapping droit à la base de donnée, on a pas le droit de copier les base de données des autres. 
 
@@ -404,8 +407,7 @@ base64 avec une rechercher sur google : express basic auth
 buffer qui transforme une base64 U2FicmlzdGk6a2l3a en chaine de caractere
 
 
-Middleware associer à use et next
-middlear eet uen focntion qui a 3 parametres (req, res, next)
+Middleware associer à use et next,  c'est est une focntion qui a 3 parametres (req, res, next)
 
 
 
@@ -413,8 +415,8 @@ important : https://www.npmjs.com/package/bcrypt
 
 bcrypt c'est un generateur de hash avec element qu'on connait et la partie secret
 
-salt_round : salt c'est un point d'entrée, un nombre aleatoire est une suite d'operation avec un point d'entrée et des operation dans tous les sen; En info on a pas vraiement de laleatoire, c'est du pseudo random
-SALT_ROUTE : c'est le point d'entré poour creer un alteatoire salt_ROUTE : 10 c'est deja complexe. à voir dans la doc.
+salt_round : salt c'est un point d'entrée, un nombre aleatoire est une suite d'operation avec un point d'entrée et des operation dans tous les sens; En info on a pas vraiement de l'aleatoire, c'est du pseudo random
+SALT_ROUTE : c'est le point d'entrée poour creer un alteatoire salt_ROUTE : 10 c'est deja complexe. à voir dans la doc.
 
 pour notre projet a voir prisma.
 
@@ -429,7 +431,7 @@ Next.js Framework de node.js :
 - (nuxt.js pour la stack vue c'est faire du front et du back. )
 concernant Next.js Il y a des choix fort dans l'utilisation de ces stack exemple :
 - choix fort du routing par fichier : a chaque route creer on doit creer un fichier api/toto/route.js
-- serverless : serveur qui n'est pas toujours allumé pour le projet. il se lance des qu'on l'appelle. Ce sont des fcontions qui sont prete à etre lancés
+- serverless : serveur qui n'est pas toujours allumé pour le projet. il se lance des qu'on l'appelle. Ce sont des fonctions qui sont prete à etre lancés
 Mode serverless on doit faire des choses tres petit, marche bien avec le backend. On ne fait pas ça en interne. 
 Avantage : performance, gain d'argent...
 https://guide.sst.dev/chapters/fr/what-is-serverless.html
