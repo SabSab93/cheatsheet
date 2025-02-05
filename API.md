@@ -1,6 +1,7 @@
 # API
 
 Utilisation de la stack nodeJS pour le backend, en continuité avec le javascript qui est un outil pour utilisation de site dynamique.
+
 Les notes = TP noté en fin de module et derniere demi journée 5 et 6 fevrier 2025
 
 ## Les API 
@@ -9,28 +10,29 @@ Nous allons dans un premier temps utiliser les API avec le TP Stapi cinema
 
 API : application programming interface : API  permet d'acceder à un service comme des données ou des fonctionnalités fournies par un systeme tiers 
 dans ce cas on dit le systeme tier expose une API.
-Il y a donc une communication entre 2 application afin de fournir les données dans un format souhaité, soit une possibilite de customiser; parmis c'est 2 applications une consommatrice du service et l'autre productrice de se service,
+
+Il y a une communication entre 2 applications afin de fournir les données dans un format souhaité; parmis c'est 2 applications une consommatrice du service et l'autre productrice de se service.
+
 C'est egalement une interface de programmation qui permet de gerer de la base de donnée de maniere **securisée**; la gestion des rôles, gestions des droits.
-Cela n'est pas seulement une solutoin technique, l'API fournit une opportunité business afin elle peut etre payante pour certaines fonctionnalité tel que l'utilisation de google maps dans l'app UBER.
+Cela n'est pas seulement une solution technique, l'API fournit une opportunité business en effet elle peut etre payante pour certaines fonctionnalité tel que l'utilisation de google maps dans l'app UBER.
 
 
 -> permet à 2 application de communiquer sans se soucier de la maniere dont l'autre est codée.
 Techno possible 
--REST (HTTP => Texte ou JSON)
--SOAP (XML) : a definir
--GraphQL (auto-doc en MBA 1) : gros points fort auto documentation, c'est de l'auto completion pas besoin de connaitre la techno pour utiliser
--RPC (données binaire type protobuf) : google, utilistaion tres petit, tres formaté echange de donnée binaire
--...
+- REST (HTTP => Texte ou JSON)
+- SOAP (XML) : a definir
+- GraphQL (auto-doc en MBA 1) : gros points fort auto documentation, c'est de l'auto completion pas besoin de connaitre la techno pour utiliser
+- RPC (données binaire type protobuf) : google, utilistaion tres petit, tres formaté echange de donnée binaire
+- ...
 
 
 ## Les API REST
 
-API REST : Une API REST est une interface de programmation d'application (API) qui permet d'établir une communication entre plusieurs logiciels. 
-Grâce à elle, des logiciels d'applications utilisant différents systèmes d'exploitation peuvent interagir et 
-partager des informations par l'intermédiaire du protocole HTTP. Une maniere uniforme mais non obligatoire de faire des API
+API REST : Une API REST permet à des logiciels d'applications utilisant différents systèmes d'exploitation à interagir et partager des informations par l'intermédiaire du **protocole HTTP**. Une maniere uniforme mais non obligatoire de faire des API
 
 REST: REpresentational State Transfer; C'est une API qui a ete construite selon les standards du web.
-REST c'est une architecture logicielle basée sur le http. HTPP c'est un protocole de reference qui définit les communication sur le web. On va donc s'appuyer sur ce protocole http pour concevoir l'api REST.
+
+REST c'est une architecture logicielle basée sur le http. HTTP c'est un protocole de reference qui définit les communication sur le web. On va donc s'appuyer sur ce protocole http pour concevoir l'api REST.
 
 API c'est le quoi ? REST c'est le comment ?
 
@@ -57,8 +59,8 @@ pluralApiId = restaurant**s**
 
 Les méthodes PUT et PATCH ont des significations différentes :
 
-- PUT, remplace les données par celle qui sont envoyées dans la requête. Tous les elements, il faudrait donc envoyer tous les champs !!
- mais ne fonctionne pas dans notre cas pour la bonne pratique si il y a une modification partielle il ets preferable d'utiliser PATCH
+- PUT, remplace les données par celle qui sont envoyées dans la requête c'est à dire TOUS les elements, il faudra donc envoyer tous les champs !!
+ mais ne fonctionne pas dans notre cas pour la bonne pratique si il y a une modification partielle il est preferable d'utiliser PATCH.
 - PATCH, permet la modification partielle d'une ressource en fusionnant les données envoyées avec les données déjà présentes ou grâce à 
 l'utilisation d'opération de modification.
 
@@ -92,7 +94,7 @@ Comment tester une API ?
 
 Les Headless CMS
 
-CMS = Content Management System, Un système de gestion de contenu est une plateforme logicielle permettant de créer, organiser et publier du contenu sur un site web ou application. Le plus connu Wordpress 
+CMS = Content Management System (système de gestion de contenu) est une plateforme logicielle permettant de créer, organiser et publier du contenu sur un site web ou application. Le plus connu Wordpress.
 
 +Headless CMS = sans interface graphique
 = API sans coder
@@ -108,12 +110,12 @@ Head c'est l'interface
 - recuperer une liste de films recents
 - recupere les details du deuxieme film de la liste
 - recupere les acteurs d'un film
-- recupere les informattions d'un acteur
+- recupere les informations d'un acteur
 
 
-un des headeur important est le content type  pour avoir le type de donnée qu'on appelle
+Headers est comme une source d'informations supplémentaire pour chaque appel d'API que vous effectuez. Leur rôle est de représenter les métadonnées associées à une demande et une réponse d'API. Un des header important est le content type  pour avoir le type de donnée que l'on appelle
 
-lancer plusieurs get ou bien lancer une page web on voit plein d'element lancés en meme temps c'est pour jouer sur la performance et une histoire de paralelelisme
+lancer plusieurs get ou bien lancer une page web on voit plein d'elements lancés en meme temps c'est pour jouer sur la performance et une histoire de paralelelisme
 c'est interet du rest avoir de petites requetes à l'opposé de graphql
 
 uuid : les id sont souvent en chaine de caractere pour eviter une colision et avoir 2 meme id on utilise les timestamp. On peut egalement paralellisé les bases de données.  c 'est pour ça que le timestamp ajout une heure et d'autre element
@@ -123,10 +125,10 @@ uuid : les id sont souvent en chaine de caractere pour eviter une colision et av
 populate=* voir les dependance
 
 
-lecture de requete
 
 
-refaire le meme exo en graphql
+
+refaire le meme exo en graphql pour info
 
 aller dans marketplace : documentation et graphql dans strapi a installer
 
@@ -142,12 +144,11 @@ https://expressjs.com/
 
 Utilisation de CRUD classique :
 
-il nous faut des ressources, definir des tables, puis definir des champs c'est l'aspect base de donnée on peut utiliser un ORM ( definition) exemple de courant Sequelize
+il nous faut des ressources, definir des tables, puis definir des champs c'est l'aspect base de donnée on peut utiliser un ORM exemple le plus courant Sequelize
 
 
 ORM: désigne une technique de programmation informatique qui crée un pont entre les bases de données relationnelles et le paradigme de la POO
-
-l’ORM met à disposition des classes objet permettant de manipuler les bases de données relationnelles. ON manipule ainsi des objets et l’ORM transforme le tout en requêtes compréhensibles par la base de données: exemple : sequelize, django
+Il met à disposition des classes objet permettant de manipuler les bases de données relationnelles. On manipule ainsi des objets et l’ORM transforme le tout en requêtes compréhensibles par la base de données: exemple : sequelize, django
 
 L'interet de l'orm permet de lier la base de donnée et le code et donc ne plus toucher à la base de donnée en cas de modification, les données seront synchronisées en conservant l'historique des modifications.
 
@@ -173,7 +174,7 @@ Il faut creer la partie content builder , puis les routes etc ... tech qu'on peu
 
 sequelize c'est pour se connecter à la base de donnée
 
--------------------------------------
+
 
 creer express : 
 Express.js : Express.js est utilisé pour créer API et applications mobiles. 
@@ -462,4 +463,35 @@ https://neon.tech/docs/guides/node
 
 ![alt text](image-3.png)
 
-on va sur neon : 
+on va sur neon : une base de donnée en ligne
+
+vercel : deploiement gratuit
+
+
+Objectif aujourd'hui et de faire un TP avec express et prisma
+
+
+Mercredi :
+https://authjs.dev/?_gl=1*15z1rj9*_gcl_au*MTYwNDAxMTY5LjE3Mzg3NDE1OTA.
+
+
+
+providers : 
+credentials : un paquet dans la librairie de auth.js pour s'authentifier
+resend : envoie de mail pour identifier
+  
+  
+  cde a taper pour installer prisma :
+
+  npm install prisma --save-dev
+
+  npx prisma init
+
+
+  pour hasher installer bcrypt
+  npm install bcrypt
+
+  Middleware se sont des etapes 
+  
+
+  d.ts pour ajouter un tiping request token?
