@@ -553,7 +553,7 @@ bcrypt c'est un generateur de hash avec element qu'on connait et la partie secre
 ## HEADER
 Headers est comme une source d'informations supplémentaire pour chaque appel d'API que vous effectuez. Leur rôle est de représenter les métadonnées associées à une demande et une réponse d'API. Un des header important est le content type  pour avoir le type de donnée que l'on appelle
 ## MIDDLEWARE
-C'est une couche technique entre l'OS (sys exploitation) et la couche applicative. Son rôle c'est aider les logiciels et appliactions à interagir ensemble. Il fournit des services récurrents permettant de faire circuler les données entre app sabs que cela n'ait ete prevu pour. Le but est de simplifier le dev sans penser aux contrainte exterieur
+C'est une couche technique entre l'OS (sys exploitation) et la couche applicative. Son rôle c'est aider les logiciels et appliactions à interagir ensemble. Il fournit des services récurrents permettant de faire circuler les données entre app sans que cela n'ait ete prevu pour. Le but est de simplifier le dev sans penser aux contrainte exterieur
 
 ## BASIC AUTH
 Envoi de l'identifiant et du mot de passe à chaque requête (acces ressource)
