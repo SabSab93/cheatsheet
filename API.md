@@ -495,3 +495,112 @@ resend : envoie de mail pour identifier
   
 
   d.ts pour ajouter un tiping request token?
+
+
+  cours univ : https://cours-info.iut-bm.univ-fcomte.fr/upload/supports/S3/web/cot%20serveur/R401%20-%20services%20web/Week%201%20-%20authentication.pdf
+
+
+# Definition à connaitre 
+
+## API
+
+
+application programming interface  permet d'acceder à un service comme des données ou des fonctionnalités fournies par un systeme tiers dans ce cas on dit le systeme tier expose une API.
+
+Il y a une communication entre 2 applications afin de fournir les données dans un format souhaité; parmis c'est 2 applications une consommatrice du service et l'autre productrice de se service.
+
+C'est egalement une interface de programmation qui permet de gerer de la base de donnée de maniere securisée; la gestion des rôles, gestions des droits. Cela n'est pas seulement une solution technique, l'API fournit une opportunité business en effet elle peut etre payante pour certaines fonctionnalité tel que l'utilisation de google maps dans l'app UBER.
+
+Exemple de Techno 
+
+- REST (HTTP => Texte ou JSON)
+- SOAP (XML) : a definir
+- GraphQL (auto-doc) 
+RPC (données binaire type protobuf) 
+
+## API REST
+C'est une API qui a ete construite selon les standards du web. REST c'est une architecture logicielle basée sur le http. HTTP c'est un protocole de reference qui définit les communication sur le web. On va donc s'appuyer sur ce protocole http pour concevoir l'api REST afin de garantir une meilleure integration aux communications du web
+## PUT / PATCH
+- PUT, remplace les données par celle qui sont envoyées dans la requête c'est à dire TOUS les elements, il faudra donc envoyer tous les champs !!
+ mais ne fonctionne pas dans notre cas pour la bonne pratique si il y a une modification partielle il est preferable d'utiliser PATCH.
+- PATCH, permet la modification partielle d'une ressource en fusionnant les données envoyées avec les données déjà présentes ou grâce à l'utilisation d'opération de modification.
+## CMS
+CMS = Content Management System (système de gestion de contenu) est une plateforme logicielle permettant de créer, organiser et publier du contenu sur un site web ou application. Le plus connu Wordpress.
+
+Strapi est un open-source headless CMS (cad sans interface graphique), à la difference de wordpress il ne gere pas les vue il expose les données sous formes d'API, l'avantage est le choix de la stack niveau base de donnée 
+
+## AUTHENTIFICATEUR DU TYPE GOOGLE/MICROSOFT
+
+## PASSKEY
+Un passkey est une clé cryptographique conçue pour remplacer les mots de passe.IL fonctionne grâce à l'authentification par paires de clés publique-privée.
+
+Contrairement à un mot de passe, les passkeys ne peuvent pas être partagés, mémorisés ou écrits. Ils sont donc beaucoup moins vulnérables aux types d'attaques.
+
+Lorsqu'un passkey est créé, deux clés cryptographiques sont générées :
+
+1. La clé publique : La clé publique reste sur le serveur du fournisseur de services. Elle n'est pas sensible en soi et ne peut pas être utilisée pour accéder à votre compte.
+2. La clé privée : Cette clé est conservée sur l'appareil de l'utilisateur, comme un smartphone. Elle ne quitte jamais l'appareil et est toujours protégée par une forme forte de vérification de l'utilisateur.
+
+## HASH
+Une fonction de hachage est une **fonction** qui, à partir d'une donnée fournie en entrée, calcule **très rapidement** une **empreinte unique** de cette donnée,
+de sorte que toute modification de la donnée entraîne une modification **significative** de l'empreinte (la sortie).Egalement irreversible : Il s’agit d’une fonction à sens unique.Il est impossible de faire de l’ingénierie inverse et de retrouver le mot de passe original à partir de sa forme hachée. 
+
+exemple de hash : jeu video, commit.
+
+
+bcrypt c'est un generateur de hash avec element qu'on connait et la partie secret
+
+## HEADER
+Headers est comme une source d'informations supplémentaire pour chaque appel d'API que vous effectuez. Leur rôle est de représenter les métadonnées associées à une demande et une réponse d'API. Un des header important est le content type  pour avoir le type de donnée que l'on appelle
+## MIDDLEWARE
+C'est une couche technique entre l'OS (sys exploitation) et la couche applicative. Son rôle c'est aider les logiciels et appliactions à interagir ensemble. Il fournit des services récurrents permettant de faire circuler les données entre app sabs que cela n'ait ete prevu pour. Le but est de simplifier le dev sans penser aux contrainte exterieur
+
+## BASIC AUTH
+Envoi de l'identifiant et du mot de passe à chaque requête (acces ressource)
+Processus qui permet d'authentifier l'accès à une ressource contenue sur un serveur à travers d'un login et d'un mtp. A chaque fois que l'on souhaite acceder à une ressource il faudra indiquer dans le header le login et mtp
+exemple Basic Thomas:1234
+## BEARER AUTH
+L'authentification du porteur (Bearer), également connue sous le nom d'authentification basée sur les token, est une méthode d'authentification des utilisateurs en passant un token d'accès dans les en-têtes de requête.
+
+Le token est généralement généré par le serveur et envoyé au client une fois l'authentification réussie.
+
+Le client inclut ensuite le token dans les requêtes ultérieures adressées au serveur pour prouver son identité.
+
+Avantages :
+- Le token est sans état (stateless), ce qui signifie que le serveur n'a pas besoin de maintenir
+une session ou de stocker des informations sur l'utilisateur
+- Les tokens peuvent être facilement révoqués ou expirés par le serveur
+- Les tokens peuvent être signés cryptographiquement pour empêcher la falsification
+
+
+## TOKEN JWT
+
+Envoi d'un token à chaque requête
+- Le token est généré par le serveur
+- Le token est stocké par le client
+- Le token est valide pendant un certain temps
+
+
+JSON Web Token (JWT) est une norme ouverte  qui définit un moyen compact et autonome pour transmettre en toute sécurité des informations en objet JSON.
+Ces informations peuvent être vérifiées et approuvées car elles sont signées numériquement. Les JWT peuvent être signés à l'aide d'un secret (avecl'algorithme HMAC) ou d'une paire de clés publique/privée utilisant RSA ou ECDSA.
+Dans sa forme compacte, les token Web JSON se composent de trois parties séparées par des points (.), qui sont :
+- Entête : type de token, algorithme de hashage
+- Payload : c'est la donné qu'on veut injecter dans le token , meta donnée 
+- Signature : la signature (hash de la première et deuxième partie) + un secret
+
+Avantages :
+- Il est simple à mettre en œuvre, car il est basé sur JSON, un format d'échange de données
+largement utilisé
+- Il est sans état, ce qui signifie que le serveur n'a pas besoin de maintenir une session pour le
+client, ce qui peut être utile pour l'évolutivité
+- Il est autonome, ce qui signifie que le jeton contient toutes les informations nécessaires pour
+authentifier l'utilisateur, éliminant ainsi le besoin d'interroger la base de données plusieurs
+fois
+- Il est largement pris en charge dans différentes plates-formes
+
+
+
+## OAUTH
+- Le token est généré par un tiers de confiance
+- Le token est stocké par le client
+- Le token est valide pendant un certain temps
