@@ -483,9 +483,13 @@ resend : envoie de mail pour identifier
   
   cde a taper pour installer prisma :
 
-  npm install prisma --save-dev
-
-  npx prisma init
+- npm install prisma --save-dev
+- npx prisma init
+- npm run dev
+- npx prisma db push
+- npx prisma generate
+- npm install jsonwebtoken : pour utiliser la fonction verify et compare 
+- npm install bcrypt : pour hacher le mot de passe
 
 
   pour hasher installer bcrypt
