@@ -499,6 +499,62 @@ resend : envoie de mail pour identifier
 
   cours univ : https://cours-info.iut-bm.univ-fcomte.fr/upload/supports/S3/web/cot%20serveur/R401%20-%20services%20web/Week%201%20-%20authentication.pdf
 
+## One-to-many 1-n 
+```ts
+model User {
+  id    Int    @id @default(autoincrement())
+  posts Post[]
+}
+
+model Post {
+  id       Int  @id @default(autoincrement())
+  author   User @relation(fields: [authorId], references: [id])
+  authorId Int
+}
+
+```
+- a user can have zero or more posts
+- a post must always have an author
+
+## Many-to-many
+```ts
+model Post {
+  id         Int                 @id @default(autoincrement())
+  title      String
+  categories CategoriesOnPosts[]
+}
+
+model Category {
+  id    Int                 @id @default(autoincrement())
+  name  String
+  posts CategoriesOnPosts[]
+}
+
+model CategoriesOnPosts {
+  post       Post     @relation(fields: [postId], references: [id])
+  postId     Int // relation scalar field (used in the `@relation` attribute above)
+  category   Category @relation(fields: [categoryId], references: [id])
+  categoryId Int // relation scalar field (used in the `@relation` attribute above)
+  assignedAt DateTime @default(now())
+  assignedBy String
+
+  @@id([postId, categoryId])
+}
+```
+
+## One-to-One
+```ts
+model User {
+  id      Int      @id @default(autoincrement())
+  profile Profile?
+}
+
+model Profile {
+  id     Int  @id @default(autoincrement())
+  user   User @relation(fields: [userId], references: [id])
+  userId Int  @unique // relation scalar field (used in the `@relation` attribute above)
+}
+```
 
 # Definition à connaitre 
 
@@ -548,9 +604,9 @@ Il prend en charge les détails essentiels du backend tels que
 Il gére des demandes et des réponses http variées et multiples pour des URL spécifiées.
 
 ## Next.js
-Framework basé sur Node.js , principalement pour le frontend, mais peut aussi gérer le backend avec des API routes.
+Framework basé sur React.js construit sur le Node.js, principalement pour le frontend, mais peut aussi gérer le backend avec des API routes.
 Il y a des choix fort dans l'utilisation de cette stack :
-- choix fort du routing par fichier : a chaque route creer on doit creer un fichier api/toto/route.js
+- choix fort du routing par fichier : a chaque route creer on doit creer un fichier api/toto/route.ts
 - serverless : serveur qui n'est pas toujours allumé pour le projet. il se lance des qu'on l'appelle. Ce sont des fonctions qui sont prete à etre lancés : gain d'argent
 
 
@@ -631,3 +687,5 @@ fois
 - Le token est généré par un tiers de confiance
 - Le token est stocké par le client
 - Le token est valide pendant un certain temps
+
+
