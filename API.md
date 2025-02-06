@@ -529,6 +529,27 @@ CMS = Content Management System (système de gestion de contenu) est une platefo
 
 Strapi est un open-source headless CMS (cad sans interface graphique), à la difference de wordpress il ne gere pas les vue il expose les données sous formes d'API, l'avantage est le choix de la stack niveau base de donnée 
 
+## ORM
+
+
+
+Un ORM (Object-Relational Mapper) fournit une couche orientée objet entre les bases de données relationnelles et les langages de programmation orientés objet sans avoir
+ à écrire de requêtes SQL. 
+Il standardise les interfaces en réduisant le passe-partout et en accélérant le processus de développement.
+L'interet de l'orm permet de lier la base de donnée et le code et donc ne plus toucher à la base de donnée en cas de modification, les données seront synchronisées en conservant l'historique des modifications.
+
+Le plus connu : sequelize, prisma 
+
+## Express.js
+
+Express.js : Express.js est utilisé pour créer API et applications mobiles. 
+Il prend en charge les détails essentiels du backend tels que 
+- les sessions, 
+- la gestion des erreurs 
+- le routage. 
+Il gére des demandes et des réponses http variées et multiples pour des URL spécifiées.
+
+
 ## AUTHENTIFICATEUR DU TYPE GOOGLE/MICROSOFT
 
 ## PASSKEY
