@@ -531,8 +531,6 @@ Strapi est un open-source headless CMS (cad sans interface graphique), à la dif
 
 ## ORM
 
-
-
 Un ORM (Object-Relational Mapper) fournit une couche orientée objet entre les bases de données relationnelles et les langages de programmation orientés objet sans avoir
  à écrire de requêtes SQL. 
 Il standardise les interfaces en réduisant le passe-partout et en accélérant le processus de développement.
@@ -542,12 +540,18 @@ Le plus connu : sequelize, prisma
 
 ## Express.js
 
-Express.js : Express.js est utilisé pour créer API et applications mobiles. 
+Express.js : Express.js , frameword de Node.js est utilisé pour créer API et applications mobiles. 
 Il prend en charge les détails essentiels du backend tels que 
 - les sessions, 
 - la gestion des erreurs 
 - le routage. 
 Il gére des demandes et des réponses http variées et multiples pour des URL spécifiées.
+
+## Next.js
+Framework basé sur Node.js , principalement pour le frontend, mais peut aussi gérer le backend avec des API routes.
+Il y a des choix fort dans l'utilisation de cette stack :
+- choix fort du routing par fichier : a chaque route creer on doit creer un fichier api/toto/route.js
+- serverless : serveur qui n'est pas toujours allumé pour le projet. il se lance des qu'on l'appelle. Ce sont des fonctions qui sont prete à etre lancés : gain d'argent
 
 
 ## AUTHENTIFICATEUR DU TYPE GOOGLE/MICROSOFT
@@ -578,10 +582,11 @@ C'est une couche technique entre l'OS (sys exploitation) et la couche applicativ
 
 ## BASIC AUTH
 Envoi de l'identifiant et du mot de passe à chaque requête (acces ressource)
-Processus qui permet d'authentifier l'accès à une ressource contenue sur un serveur à travers d'un login et d'un mtp. A chaque fois que l'on souhaite acceder à une ressource il faudra indiquer dans le header le login et mtp
-exemple Basic Thomas:1234
+Processus qui permet d'authentifier l'accès à une ressource contenue sur un serveur à travers d'un login et d'un mtp. A chaque fois que l'on souhaite acceder à une ressource 
+il faudra indiquer dans le header le login et mtp exemple Basic Thomas:1234
 ## BEARER AUTH
-L'authentification du porteur (Bearer), également connue sous le nom d'authentification basée sur les token, est une méthode d'authentification des utilisateurs en passant un token d'accès dans les en-têtes de requête.
+L'authentification du porteur (Bearer), également connue sous le nom d'authentification basée sur les token, est une méthode d'authentification 
+des utilisateurs en passant un token d'accès dans les headers de requête.
 
 Le token est généralement généré par le serveur et envoyé au client une fois l'authentification réussie.
 
@@ -603,7 +608,8 @@ Envoi d'un token à chaque requête
 
 
 JSON Web Token (JWT) est une norme ouverte  qui définit un moyen compact et autonome pour transmettre en toute sécurité des informations en objet JSON.
-Ces informations peuvent être vérifiées et approuvées car elles sont signées numériquement. Les JWT peuvent être signés à l'aide d'un secret (avecl'algorithme HMAC) ou d'une paire de clés publique/privée utilisant RSA ou ECDSA.
+Ces informations peuvent être vérifiées et approuvées car elles sont signées numériquement. Les JWT peuvent être signés à l'aide d'un secret (avecl'algorithme HMAC) ou 
+d'une paire de clés publique/privée utilisant RSA ou ECDSA.
 Dans sa forme compacte, les token Web JSON se composent de trois parties séparées par des points (.), qui sont :
 - Entête : type de token, algorithme de hashage
 - Payload : c'est la donné qu'on veut injecter dans le token , meta donnée 
