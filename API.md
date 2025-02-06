@@ -536,9 +536,9 @@ model Category {
 
 model CategoriesOnPosts {
   post       Post     @relation(fields: [postId], references: [id])
-  postId     Int // relation scalar field (used in the `@relation` attribute above)
+  postId     Int 
   category   Category @relation(fields: [categoryId], references: [id])
-  categoryId Int // relation scalar field (used in the `@relation` attribute above)
+  categoryId Int 
   assignedAt DateTime @default(now())
   assignedBy String
 
@@ -556,7 +556,7 @@ model User {
 model Profile {
   id     Int  @id @default(autoincrement())
   user   User @relation(fields: [userId], references: [id])
-  userId Int  @unique // relation scalar field (used in the `@relation` attribute above)
+  userId Int  @unique 
 }
 ```
 
