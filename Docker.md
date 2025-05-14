@@ -1,14 +1,10 @@
 # Cours Docker
 
----
-
 ## 📋 Rendu
 
 - TP final retraçant l’ensemble du cours  
 - Évaluation écrite  
 - Mise en place de Docker dans un projet existant
-
----
 
 ## 🚀 Introduction
 
@@ -20,11 +16,8 @@ Docker est une plateforme open-source qui permet de containeriser une applicatio
 
 Un conteneur est une instance en cours d’exécution d’une image Docker, lui-même proche d’une machine virtuelle légère.
 
----
 
 ## ✨ Avantages de Docker
-
-## ✨ Avantages de Docker (explications détaillées)
 
 - **Flexible**  
   Toute application peut être transformée en conteneur.
@@ -49,8 +42,6 @@ Un conteneur est une instance en cours d’exécution d’une image Docker, lui-
   Tout est consigné dans le **Dockerfile** : de la version de l’image de base au build des dépendances et à la commande de lancement. En quelques lignes de texte, un développeur comprendra comment assembler et exécuter votre application, et pourra reconstruire l’image de façon identique pour déboguer ou tester des correctifs.
 
 
----
-
 ## ⚙️ Docker vs Machine Virtuelle
 
 | Caractéristique | Machine Virtuelle     | Conteneur Docker        |
@@ -61,7 +52,6 @@ Un conteneur est une instance en cours d’exécution d’une image Docker, lui-
 | Poids           | Plusieurs GB          | Quelques MB à centaines |
 | Isolation       | Fort                  | Sécurisé, mais plus fin |
 
----
 
 ## 📝 Structure d’un Dockerfile
 
@@ -95,7 +85,6 @@ CMD ["npm", "start"]
 - **EXPOSE** : indique le port écouté (documentation)  
 - **CMD** / **ENTRYPOINT** : commande par défaut au démarrage du conteneur
 
----
 
 ## ❌ .dockerignore
 
@@ -110,11 +99,9 @@ README.md
 .dockerignore
 ```
 
----
 
 ## Déploiement Docker : Méthodes manuelle et automatisée
 
----
 
 ### 1. Méthode manuelle
 
@@ -161,7 +148,6 @@ Ouvrez un terminal dans la racine de votre projet et exécutez :
     docker rm mon-app/conteneurID
     ```
 
----
 
 ### 2. Méthode automatisée (CI/CD + Render)
 
@@ -172,8 +158,6 @@ Ouvrez un terminal dans la racine de votre projet et exécutez :
     ```bash
     .github/workflows/docker-render.yml
     ```
-
-
 
 2. **Y coller** ce workflow (adapté à vos secrets) :
 
@@ -217,7 +201,6 @@ jobs:
 2. **Créer** (ou copier) l’**HTTP Build Hook**  
 3. **Coller** l’URL comme secret `RENDER_BUILD_HOOK_URL` sur GitHub 
 
----
 
 ### 📝 En résumé
 
@@ -238,7 +221,6 @@ jobs:
   1. **Trigger** d’un webhook (Render Build Hook)  
   2. **Déploiement** instantané de la nouvelle image sur l’infrastructure Render  
 
----
 
 ## 🎯 Pourquoi Docker + Git + Render pour CI/CD ?
 
@@ -252,14 +234,12 @@ jobs:
    - Chaque build est tracé (logs, versions d’images, tags immuables), facilitant le rollback en cas de régression.  
 5. **Séparation des responsabilités**  
    - Les développeurs se concentrent sur le code, CI/CD s’occupe du build & déploiement, et Render gère l’infrastructure.  
----
 
 ## 📦 Image vs Conteneur
 
 - **Image** : modèle immuable composé de couches, stocké dans un registre, utilisé pour créer des conteneurs.  
 - **Conteneur** : instance active d’une image, avec une couche d’écriture, des processus et un état isolés.  
 
----
 
 ## 🐳 Docker Compose
 
@@ -273,7 +253,6 @@ et de lancer les conteneurs en une seule commande
 
 Plusieurs outils permettent de gérer un conteneur et ses interactions avec d'autres conteneurs
 
----
 
 ### Outils de docker compose
 
@@ -332,13 +311,11 @@ docker-compose down              # Supprimer tous les conteneurs & réseaux
 docker-compose config            # Valider la syntaxe du fichier
 ```
 
----
-
 ## 🏗️ Architecture Micro-services
 
 - Plusieurs services indépendants, chacun dans son conteneur  
 - Communication via réseaux Docker ou API REST  
 - Bénéfices : équipes/autonomie séparées, montée en charge ciblée, hétérogénéité technologique
 
----
+
 
