@@ -121,16 +121,17 @@ README.md
 
 Ouvrez un terminal dans la racine de votre projet et exécutez :
 
-1. **Build**
+1. **Build une image à partir de Dockerfile**
 
     ```bash
     docker build -t <votre-user>/mon-app:tag-name .
     ```
 
-2. **Push** (après login Docker)
+2. **Push image dans gitHub afin de partager le docker** (après login Docker)
 
     ```bash
     docker login -u <votre-user>                  # De GITHUB inscrire ensuite le token (bonne pratique) ou password de GitHub
+    docker tag mon_app <votre-user>/mon_app:latest
     docker push <votre-user>/mon-app:tag-name
     ```
 
@@ -156,7 +157,7 @@ Ouvrez un terminal dans la racine de votre projet et exécutez :
 1. **Créer** (ou modifier) le fichier :
 
     ```bash
-    .github/workflows/docker-render.yml
+    .github/workflows/docker.yml
     ```
 
 2. **Y coller** ce workflow (adapté à vos secrets) :
@@ -318,4 +319,13 @@ docker-compose config            # Valider la syntaxe du fichier
 - Bénéfices : équipes/autonomie séparées, montée en charge ciblée, hétérogénéité technologique
 
 
+
+
+## TP : 2 
+ 
+1. Front + vercel
+2. Back + render
+3. appel API
+4. docker compose
+5. votre projet
 
