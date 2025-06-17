@@ -58,24 +58,20 @@ Un conteneur est une instance en cours d’exécution d’une image Docker, lui-
 Chaque instruction crée une **couche** (sauf WORKDIR, CMD, ENTRYPOINT, ENV…)  
 
 ```dockerfile
-# 1. Base image
-FROM alpine:3.18
+FROM node:20-alpine
 
-# 2. Répertoire de travail
 WORKDIR /app
 
-# 3. Copier les fichiers de l’hôte
-COPY package.json package-lock.json ./
-COPY src/ ./src/
+RUN npm i -g serve
 
-# 4. Installer les dépendances
-RUN apk add --no-cache nodejs npm     && npm install
+COPY package.json package-lock.json* ./
+RUN npm install
 
-# 5. Documentation du port exposé
-EXPOSE 3000
+COPY . .
+RUN npm run build
 
-# 6. Commande au démarrage
-CMD ["npm", "start"]
+EXPOSE 3003
+CMD ["serve", "-s", "dist", "-p", "3003"]
 ```
 
 - **FROM** : image de base (Alpine, Debian, Python, Node, …)  
