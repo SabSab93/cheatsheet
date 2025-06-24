@@ -854,10 +854,10 @@ nouveauté eco systeme smart watch, casque vr, lunette connecté
 
 | Capacité SW                | Description rapide | Sources |
 |----------------------------|--------------------|---------|
-| **Push Notifications**     | Réveille le SW à la réception d’un message push → affiche une notif, réveille l’app. | :contentReference[oaicite:0]{index=0} |
-| **Background Sync**        | Si réseau coupé, le SW enregistre la tâche ; dès la reconnection il la rejoue.        | :contentReference[oaicite:1]{index=1} |
-| **Periodic Sync / Cron**   | API (encore limitée) pour lancer un fetch à heure fixe (ex. météo quotidienne).       | :contentReference[oaicite:2]{index=2} |
-| **Proxy réseau + Cache**   | Agit comme un proxy programmable ; choisit d’aller au cache, au réseau ou les deux.   | :contentReference[oaicite:3]{index=3} |
+| **Push Notifications**     | Réveille le SW à la réception d’un message push → affiche une notif, réveille l’app. |
+| **Background Sync**        | Si réseau coupé, le SW enregistre la tâche ; dès la reconnection il la rejoue.        |
+| **Periodic Sync / Cron**   | API (encore limitée) pour lancer un fetch à heure fixe (ex. météo quotidienne).       | 
+| **Proxy réseau + Cache**   | Agit comme un proxy programmable ; choisit d’aller au cache, au réseau ou les deux.   | 
 
 Exemples d’apps fermées mais actives : podomètre (pas + envoi serveur), app mail qui pré-télécharge vos messages.
 
@@ -867,12 +867,11 @@ Exemples d’apps fermées mais actives : podomètre (pas + envoi serveur), app 
 
 | Stratégie Workbox                  | Flux décisionnel                                     | Quand l’utiliser ?                                      | Avantages / Limites | Sources |
 |------------------------------------|------------------------------------------------------|---------------------------------------------------------|---------------------|---------|
-| **CacheOnly**                      | Toujours le cache → **jamais** réseau                | Assets *précachés* qui ne changent pas (ex : logo v123).| Ultra rapide / **jamais** mis à jour | :contentReference[oaicite:4]{index=4} |
-| **NetworkOnly**                    | Toujours le réseau                                   | Données **temps réel** : météo, bourse.                | Fresh / Offline KO  | :contentReference[oaicite:5]{index=5} |
-| **CacheFirst**                     | Si cache dispo → renvoie, sinon réseau + mise en cache | Polices, images versionnées.                           | Faible latence / risque stale | :contentReference[oaicite:6]{index=6} |
-| **NetworkFirst**                   | Tente réseau, fallback cache si offline              | Docs éditables, agenda : on préfère la fraîcheur.       | Offline OK / premier chargement ↗ | :contentReference[oaicite:7]{index=7} |
-| **StaleWhileRevalidate**           | Sert **immédiat** le cache, MAJ en arrière-plan      | Blogs, listes produits : UX rapide + cache actualisé.   | Mix perf / 2 requêtes | :contentReference[oaicite:8]{index=8} |
-
+| **CacheOnly**                      | Toujours le cache → **jamais** réseau                | Assets *précachés* qui ne changent pas (ex : logo v123).| Ultra rapide / **jamais** mis à jour | 
+| **NetworkOnly**                    | Toujours le réseau                                   | Données **temps réel** : météo, bourse.                | Fresh / Offline KO  |
+| **CacheFirst**                     | Si cache dispo → renvoie, sinon réseau + mise en cache | Polices, images versionnées.                           | Faible latence / risque stale | 
+| **NetworkFirst**                   | Tente réseau, fallback cache si offline              | Docs éditables, agenda : on préfère la fraîcheur.       | Offline OK / premier chargement ↗ | 
+| **StaleWhileRevalidate**           | Sert **immédiat** le cache, MAJ en arrière-plan      | Blogs, listes produits : UX rapide + cache actualisé.   | Mix perf / 2 requêtes | 
 > **Mnemonic** • “Cache First = Vitesse” • “Network First = Fraîcheur” • “StaleWhileRevalidate = Meilleur des deux mondes”.
 
 ---
