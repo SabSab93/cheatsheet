@@ -419,3 +419,4 @@ lorsqu'on passe au dessus on perd des couts...
 Pourquoi passer au mobile
 performance (jeu, etc...) a prendre en compte quand on passe au mobile
 nouveauté eco systeme smart watch, casque vr, lunette connecté 
+
