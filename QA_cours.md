@@ -155,3 +155,9 @@ Vérifier que plusieurs composants ou services fonctionnent correctement lorsqu�
 Arrange  : Initialisation des objets et données de test
 Act      : Appel de la fonction / unité testée
 Assert   : Vérification des résultats attendus
+
+
+
+
+https://playwright.dev/docs/aria-snapshots
+
